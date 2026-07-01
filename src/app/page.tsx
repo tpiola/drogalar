@@ -43,14 +43,20 @@ function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/5"
     >
       <nav className="container-drop flex items-center justify-between h-16 md:h-20">
-        <Link href="/" className="flex items-center gap-2">
-          <Flask className="w-6 h-6 text-brand" />
-          <span className="font-display text-lg font-bold tracking-tight">
-            Sete <span className="text-brand">Lírios</span>
-          </span>
-          <span className="hidden sm:block text-[10px] text-muted uppercase tracking-wider ml-1">
-            Farmácia de Manipulação
-          </span>
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            src="/logo-sete-lirios.jpg"
+            alt="Sete Lírios"
+            className="h-10 w-10 rounded-full object-cover"
+          />
+          <div className="flex flex-col">
+            <span className="font-display text-lg font-bold tracking-tight leading-none">
+              Sete <span className="text-brand">Lírios</span>
+            </span>
+            <span className="text-[10px] text-muted uppercase tracking-wider leading-none">
+              Farmácia de Manipulação
+            </span>
+          </div>
         </Link>
         <div className="hidden md:flex items-center gap-1">
           {links.map((l) => (
@@ -476,11 +482,20 @@ function Footer() {
   return (
     <footer className="border-t border-white/5 py-8">
       <div className="container-drop flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <Flask className="w-5 h-5 text-brand" />
-          <span className="font-display font-bold">
-            Sete <span className="text-brand">Lírios</span>
-          </span>
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo-sete-lirios.jpg"
+            alt="Sete Lírios"
+            className="h-8 w-8 rounded-full object-cover"
+          />
+          <div className="flex flex-col">
+            <span className="font-display font-bold leading-none">
+              Sete <span className="text-brand">Lírios</span>
+            </span>
+            <span className="text-[10px] text-muted uppercase tracking-wider leading-none">
+              Farmácia de Manipulação
+            </span>
+          </div>
         </div>
         <p className="text-sm text-muted">
           Farmácia de Manipulação — Franca/SP © {new Date().getFullYear()}
