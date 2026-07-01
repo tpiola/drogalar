@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Sete Lírios Farmácia",
   },
   description:
-    "Farmácia de manipulação em Franca/SP — fórmulas personalizadas, manipulação magistral, Alta Performance e fitoterápicos. 8.630 seguidores no Instagram. Atendimento humanizado.",
+    "Farmácia de manipulação em Franca/SP — fórmulas personalizadas, manipulação magistral, Alta Performance e fitoterápicos. 8.630 seguidores no Instagram. Atendimento humanizado com 5 estrelas.",
   keywords: [
     "farmácia de manipulação",
     "Franca SP",
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "manipulação magistral",
     "farmaciasetelirios",
     "Alta Performance",
+    "farmácia Franca",
   ],
   robots: { index: true, follow: true },
   alternates: { canonical: "https://setelirios.vercel.app" },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Sete Lírios Farmácia de Manipulação",
     title: "Sete Lírios | Farmácia de Manipulação em Franca/SP",
     description:
-      "Fórmulas personalizadas com excelência farmacêutica. Alta Performance, alopáticos e fitoterápicos.",
+      "Fórmulas personalizadas com excelência farmacêutica. Alta Performance, alopáticos e fitoterápicos. ★5.0 — 8.630 seguidores.",
   },
 };
 
@@ -54,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
+        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased bg-[#f8f9f8] text-[#2c3e50]`}
       >
         {children}
       </body>
