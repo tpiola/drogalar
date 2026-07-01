@@ -20,6 +20,7 @@ import {
   TestTube as Beaker,
 } from "lucide-react";
 import Link from "next/link";
+import { CONTACT } from "./data";
 
 /* ─── NAVBAR ─── */
 function Navbar() {
@@ -45,7 +46,10 @@ function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <Flask className="w-6 h-6 text-brand" />
           <span className="font-display text-lg font-bold tracking-tight">
-            Droga<span className="text-brand">lar</span>
+            Sete <span className="text-brand">Lírios</span>
+          </span>
+          <span className="hidden sm:block text-[10px] text-muted uppercase tracking-wider ml-1">
+            Farmácia de Manipulação
           </span>
         </Link>
         <div className="hidden md:flex items-center gap-1">
@@ -145,7 +149,9 @@ function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-brand-light mb-6"
           >
             <Sparkles className="w-4 h-4" />
-            Farmácia de Manipulação em Franca/SP
+            Farmacêutico CRF/SP • Farmácia de Manipulação
+            <span className="text-gold ml-2">★ {CONTACT.rating}</span>
+            <span className="text-muted ml-1">({CONTACT.followers.toLocaleString()} seguidores)</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -176,7 +182,7 @@ function Hero() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="https://wa.me/5516999999999"
+              href={CONTACT.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -377,12 +383,12 @@ function Cta() {
               pode transformar sua saúde.
             </p>
             <a
-              href="https://wa.me/5516999999999"
+              href={CONTACT.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-lg px-8 py-4"
             >
-              <Phone className="w-5 h-5" /> Agendar pelo WhatsApp
+              <Phone className="w-5 h-5" /> Fale pelo WhatsApp
             </a>
           </div>
         </motion.div>
@@ -416,24 +422,24 @@ function Contact() {
             {
               icon: Phone,
               label: "Telefone",
-              value: "(16) 99999-9999",
-              href: "tel:5516999999999",
+              value: CONTACT.phone1,
+              href: CONTACT.phoneHref,
             },
             {
-              icon: Mail,
-              label: "E-mail",
-              value: "contato@drogalar.com.br",
-              href: "mailto:contato@drogalar.com.br",
+              icon: Phone,
+              label: "WhatsApp",
+              value: CONTACT.whatsapp,
+              href: CONTACT.whatsappLink,
             },
             {
               icon: MapPin,
               label: "Endereço",
-              value: "Franca, SP",
+              value: CONTACT.address,
             },
             {
               icon: Clock,
               label: "Horário",
-              value: "Seg-Sex 08h-18h | Sáb 08h-12h",
+              value: CONTACT.hours,
             },
           ].map((item) => (
             <div key={item.label} className="card-premium flex items-center gap-4">
@@ -471,7 +477,7 @@ function Footer() {
         <div className="flex items-center gap-2">
           <Flask className="w-5 h-5 text-brand" />
           <span className="font-display font-bold">
-            Droga<span className="text-brand">lar</span>
+            Sete <span className="text-brand">Lírios</span>
           </span>
         </div>
         <p className="text-sm text-muted">
@@ -509,7 +515,7 @@ export default function Home() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/5516999999999"
+        href={CONTACT.whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform"

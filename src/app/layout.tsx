@@ -15,28 +15,29 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Drogalar | Farmácia de Manipulação em Franca/SP",
-    template: "%s | Drogalar Farmácia",
+    default: "Sete Lírios | Farmácia de Manipulação em Franca/SP",
+    template: "%s | Sete Lírios Farmácia",
   },
   description:
-    "Farmácia de manipulação em Franca/SP — fórmulas personalizadas, manipulação magistral, consultoria farmacêutica e produtos de alta qualidade. Sua saúde é única, seu tratamento também.",
+    "Farmácia de manipulação em Franca/SP — fórmulas personalizadas, manipulação magistral, Alta Performance e fitoterápicos. 8.630 seguidores no Instagram. Atendimento humanizado.",
   keywords: [
     "farmácia de manipulação",
     "Franca SP",
+    "Sete Lírios",
     "fórmulas personalizadas",
     "manipulação magistral",
-    "consultoria farmacêutica",
-    "Drogalar",
+    "farmaciasetelirios",
+    "Alta Performance",
   ],
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://drogalar.vercel.app" },
+  alternates: { canonical: "https://setelirios.vercel.app" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "Drogalar Farmácia de Manipulação",
-    title: "Drogalar | Farmácia de Manipulação em Franca/SP",
+    siteName: "Sete Lírios Farmácia de Manipulação",
+    title: "Sete Lírios | Farmácia de Manipulação em Franca/SP",
     description:
-      "Fórmulas personalizadas com excelência farmacêutica. Sua saúde merece o melhor.",
+      "Fórmulas personalizadas com excelência farmacêutica. Alta Performance, alopáticos e fitoterápicos.",
   },
 };
 
