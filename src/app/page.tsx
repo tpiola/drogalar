@@ -5,27 +5,20 @@ import {
   Menu, X, ChevronDown, ChevronRight, MapPin, Clock, Star,
   Phone, MessageCircle, Instagram, ArrowRight, FlaskRound,
   Shield, Award, Sparkles, Heart, Activity, Zap, Leaf,
-  Pill, CheckCircle, Quote,
+  Pill, CheckCircle, Quote, Dumbbell, TrendingUp,
+  Flame, Droplets, Battery,
 } from "lucide-react";
 import Link from "next/link";
-import { CONTACT, categories, featuredProducts } from "./data";
+import { CONTACT, categories, featuredProducts, planos } from "./data";
 
 /* ============================================================
-   SETE LÍRIOS — DARK NAVY LUXURY + GOLD
+   SETE LÍRIOS SUPLEMENTOS — FITNESS PREMIUM
    ============================================================ */
 
-const navLinks = [
-  { label: "Início", href: "#" },
-  { label: "Manipulação", href: "#servicos" },
-  { label: "Categorias", href: "#categorias" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato" },
-];
-
 const testimonials = [
-  { text: "Excelente atendimento! Fiz minha fórmula de reposição hormonal e o resultado foi incrível.", name: "Maria Cláudia", role: "Cliente" },
-  { text: "A melhor farmácia de manipulação de Franca. Profissionalismo e qualidade impecáveis.", name: "Dr. Ricardo Alves", role: "Médico" },
-  { text: "Produtos de altíssima qualidade. A creatina manipulada deles é a melhor que já usei.", name: "Lucas Oliveira", role: "Atleta" },
+  { text: "A creatina manipulada deles é pura e muito mais barata que as marcas famosas. Resultado incrível nos treinos!", name: "Rafael Martins", role: "Atleta natural" },
+  { text: "O pré-treino personalizado mudou meus treinos. Energia limpa sem aquela tremedeira dos industrializados.", name: "Amanda Costa", role: "CrossFit" },
+  { text: "Melhor custo-benefício. Tomo whey isolado manipulado há 6 meses — mais proteína por menos dinheiro.", name: "Thiago Oliveira", role: "Fisiculturista" },
 ];
 
 const stats = [
@@ -35,13 +28,11 @@ const stats = [
   { number: "100%", label: "Manipulado" },
 ];
 
-const services = [
-  { icon: FlaskRound, title: "Fórmulas Magistrais", desc: "Prescrições personalizadas com rigoroso controle de qualidade ANVISA." },
-  { icon: Activity, title: "Reposição Hormonal", desc: "Hormônios bioidênticos manipulados sob medida para sua necessidade." },
-  { icon: Zap, title: "Alta Performance", desc: "Creatina, whey, pré-treino e suplementos esportivos personalizados." },
-  { icon: Leaf, title: "Fitoterápicos", desc: "Medicamentos naturais manipulados com princípios ativos vegetais." },
-  { icon: Heart, title: "Bem-Estar", desc: "Vitaminas, minerais e nutracêuticos para sua saúde diária." },
-  { icon: Sparkles, title: "Dermatologia", desc: "Cremes, géis e loções manipulados para tratamento dermatológico." },
+const benefits = [
+  { icon: TrendingUp, title: "Mais puro", desc: "Sem excipientes desnecessários. Só o ativo que você precisa." },
+  { icon: Battery, title: "Mais potente", desc: "Dosagem exata para seu objetivo. Nada de subdosagem." },
+  { icon: Flame, title: "Melhor custo", desc: "Até 40% mais barato que marcas industrializadas." },
+  { icon: Droplets, title: "Sob medida", desc: "Fórmula personalizada para seu biotipo e meta." },
 ];
 
 /* ─── NAVBAR ─── */
@@ -59,27 +50,26 @@ function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-navy/95 backdrop-blur-xl shadow-lg shadow-black/20" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <img src="/logo-sete-lirios.jpg" alt="Sete Lírios" className="h-10 w-10 rounded-full ring-2 ring-gold/30 group-hover:ring-gold/60 transition-all" />
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-bold text-navy text-sm group-hover:scale-105 transition-transform">
+              SL
+            </div>
             <div>
               <p className="font-bold text-base text-white leading-tight">Sete <span className="text-gold">Lírios</span></p>
-              <p className="text-[10px] text-white/50 uppercase tracking-[0.2em] leading-tight">Farmácia de Manipulação</p>
+              <p className="text-[10px] text-white/50 uppercase tracking-[0.2em] leading-tight">{CONTACT.subtitleShort}</p>
             </div>
           </Link>
 
-          {/* Nav Links */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l) => (
-              <a key={l.label} href={l.href}
+            {["Início", "Suplementos", "Planos", "Resultados", "Contato"].map((l, i) => (
+              <a key={l} href={["#", "#produtos", "#planos", "#depoimentos", "#contato"][i]}
                 className="px-4 py-2 text-sm text-white/70 hover:text-gold transition-colors relative group">
-                {l.label}
+                {l}
                 <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform" />
               </a>
             ))}
           </nav>
 
-          {/* Actions */}
           <div className="flex items-center gap-3">
             <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-gold text-xs font-medium hover:bg-gold/20 transition-all">
@@ -92,14 +82,13 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-navy/98 backdrop-blur-xl border-t border-gold/10">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {navLinks.map((l) => (
-              <a key={l.label} href={l.href} onClick={() => setMenuOpen(false)}
+            {["Início", "Suplementos", "Planos", "Resultados", "Contato"].map((l, i) => (
+              <a key={l} href={["#", "#produtos", "#planos", "#depoimentos", "#contato"][i]} onClick={() => setMenuOpen(false)}
                 className="block px-4 py-3 text-sm text-white/70 hover:text-gold hover:bg-gold/5 rounded-lg transition-all">
-                {l.label}
+                {l}
               </a>
             ))}
             <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
@@ -113,51 +102,48 @@ function Navbar() {
   );
 }
 
-/* ─── HERO ─── */
+/* ─── HERO FITNESS ─── */
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gold/3 rounded-full blur-[100px]" />
+      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold/3 rounded-full blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="animate-fade-up stagger-1">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/20 text-gold text-xs tracking-wider uppercase">
-                <Sparkles className="w-3 h-3" /> Farmácia de Manipulação
+                <Dumbbell className="w-3 h-3" /> Suplementos Manipulados
               </span>
             </div>
 
-            <h1 className="animate-fade-up stagger-2 text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[0.95] tracking-tight">
-              Sua saúde é
+            <h1 className="animate-fade-up stagger-2 text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[0.9] tracking-tight">
+              Performance que<br />
+              <span className="text-gradient">transforma</span>
               <br />
-              <span className="text-gradient">única</span>
-              <br />
-              seu tratamento é{" "}
-              <span className="text-gradient">personalizado</span>
+              resultados que{" "}
+              <span className="text-gradient">impressionam</span>
             </h1>
 
-            <p className="animate-fade-up stagger-3 text-white/50 text-base sm:text-lg max-w-md leading-relaxed">
-              Farmácia de manipulação em Franca/SP. Fórmulas magistrais com 
-              excelência farmacêutica, insumos certificados e atendimento humanizado.
+            <p className="animate-fade-up stagger-3 text-white/50 text-base sm:text-lg max-w-lg leading-relaxed">
+              Suplementos manipulados em Franca/SP. Creatina, Whey, Pré-Treino e vitaminas 
+              personalizadas — mais puro, mais potente, até 40% mais barato.
             </p>
 
             <div className="animate-fade-up stagger-4 flex flex-wrap gap-3 pt-2">
               <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
                 className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm">
-                <MessageCircle className="w-4 h-4" /> Fale pelo WhatsApp
+                <MessageCircle className="w-4 h-4" /> Comprar pelo WhatsApp
               </a>
-              <a href="#servicos"
+              <a href="#produtos"
                 className="btn-navy inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm">
-                Nossos Serviços <ArrowRight className="w-4 h-4" />
+                Ver Suplementos <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Trusted bar */}
             <div className="animate-fade-up stagger-5 flex flex-wrap gap-6 pt-4">
               {stats.slice(0, 3).map((s) => (
                 <div key={s.label}>
@@ -168,18 +154,22 @@ function Hero() {
             </div>
           </div>
 
-          {/* Logo Hero */}
+          {/* Hero Visual */}
           <div className="hidden lg:flex justify-center animate-fade-up stagger-3">
             <div className="relative">
-              <div className="w-72 h-72 rounded-full bg-gradient-to-br from-gold/10 via-navy-light to-gold/5 flex items-center justify-center animate-float">
-                <img src="/logo-sete-lirios.jpg" alt="Sete Lírios" className="w-48 h-48 rounded-full object-cover shadow-2xl ring-4 ring-gold/20" />
+              <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-gold/10 via-navy-light to-gold/5 flex items-center justify-center animate-float border border-gold/10">
+                <div className="text-center">
+                  <Dumbbell className="w-20 h-20 text-gold/40 mx-auto mb-4" />
+                  <p className="text-gold font-bold text-2xl">SUPLEMENTOS</p>
+                  <p className="text-white/30 text-sm">Manipulados • Puros • Potentes</p>
+                </div>
               </div>
               <div className="absolute -bottom-2 -right-2 bg-navy-light/90 backdrop-blur-xl rounded-xl p-4 border border-gold/20 shadow-gold">
                 <div className="flex items-center gap-2">
                   <Star className="w-5 h-5 text-gold fill-gold" />
                   <div>
-                    <p className="font-bold text-white text-sm">Excelência {CONTACT.rating}</p>
-                    <p className="text-white/40 text-xs">{CONTACT.followers.toLocaleString()} seguidores</p>
+                    <p className="font-bold text-white text-sm">Economia até 40%</p>
+                    <p className="text-white/40 text-xs">vs. marcas industrializadas</p>
                   </div>
                 </div>
               </div>
@@ -191,78 +181,18 @@ function Hero() {
   );
 }
 
-/* ─── STATS BAR ─── */
-function StatsBar() {
+/* ─── BENEFITS ─── */
+function Benefits() {
   return (
-    <section className="section-dark py-10 border-y border-gold/5">
+    <section className="section-dark py-16 border-y border-gold/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="text-gold text-2xl sm:text-3xl font-bold">{s.number}</p>
-              <p className="text-white/40 text-xs sm:text-sm mt-1">{s.label}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {benefits.map((b) => (
+            <div key={b.title} className="text-center p-4">
+              <b.icon className="w-8 h-8 text-gold mx-auto mb-3" />
+              <p className="text-white font-bold text-sm mb-1">{b.title}</p>
+              <p className="text-white/40 text-xs leading-relaxed">{b.desc}</p>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── SERVICES ─── */
-function Services() {
-  return (
-    <section id="servicos" className="section-light py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">O que fazemos</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mt-3 leading-tight">
-            Nossos <span className="text-gradient">Serviços</span>
-          </h2>
-          <p className="text-muted mt-4 text-sm sm:text-base leading-relaxed">
-            Soluções personalizadas em manipulação farmacêutica para cada necessidade.
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((svc, i) => (
-            <div key={svc.title}
-              className="group p-6 sm:p-8 rounded-2xl bg-white border border-gold/10 hover:border-gold/30 hover:shadow-gold-lg transition-all duration-500 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold/10 to-gold/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <svc.icon className="w-6 h-6 text-gold" />
-              </div>
-              <h3 className="text-lg font-bold text-navy mb-2">{svc.title}</h3>
-              <p className="text-muted text-sm leading-relaxed">{svc.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── CATEGORIES ─── */
-function Categories() {
-  return (
-    <section id="categorias" className="section-dark py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">Categorias</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">
-            Especialidades
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categories.map((cat) => (
-            <a key={cat.name} href="#"
-              className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-white/5 border border-gold/5 hover:border-gold/20 hover:bg-white/[0.07] transition-all duration-300">
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 group-hover:scale-110 transition-all">
-                <FlaskRound className="w-6 h-6 text-gold" />
-              </div>
-              <span className="text-white text-xs font-semibold text-center leading-tight">{cat.name}</span>
-              <span className="text-white/30 text-[10px]">{cat.sub.length} fórmulas</span>
-            </a>
           ))}
         </div>
       </div>
@@ -273,37 +203,121 @@ function Categories() {
 /* ─── PRODUCTS ─── */
 function Products() {
   return (
-    <section className="section-light py-20 sm:py-28">
+    <section id="produtos" className="section-light py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Produtos</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy mt-2">Mais Procurados</h2>
-          </div>
-          <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 text-sm text-gold-dark hover:text-gold transition-colors">
-            Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-          </a>
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Suplementos</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mt-3 leading-tight">
+            Performance <span className="text-gradient">Pura</span>
+          </h2>
+          <p className="text-muted mt-4 text-sm sm:text-base leading-relaxed">
+            Suplementos manipulados com matéria-prima certificada. Máxima pureza, melhor absorção.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {featuredProducts.map((p) => (
             <div key={p.name} className="group bg-white rounded-xl border border-gold/5 p-3 hover:border-gold/20 hover:shadow-gold transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-gold/5 to-navy/5 rounded-lg mb-3 flex items-center justify-center">
-                <FlaskRound className="w-10 h-10 text-gold/30" />
+              <div className="aspect-square bg-gradient-to-br from-gold/5 via-navy/5 to-gold/5 rounded-lg mb-3 flex items-center justify-center">
+                <Pill className="w-10 h-10 text-gold/40 group-hover:scale-110 transition-transform" />
               </div>
               {p.badge && (
-                <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-gold/10 text-gold-dark mb-2">
+                <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold mb-2 ${p.badgeColor}`}>
                   {p.badge}
                 </span>
               )}
               <p className="text-[11px] text-muted mb-1">{p.category}</p>
-              <h3 className="text-sm font-semibold text-navy mb-1 line-clamp-2 leading-snug">{p.name}</h3>
+              <h3 className="text-sm font-semibold text-navy mb-1 line-clamp-2 leading-snug min-h-[2.5em]">{p.name}</h3>
               <p className="text-base font-bold text-gold-dark">{p.price}</p>
-              <p className="text-[10px] text-muted">{p.parcel}</p>
+              <p className="text-[10px] text-muted mb-2">{p.parcel}</p>
               <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
-                className="block w-full mt-3 py-2 rounded-full bg-navy text-white text-[11px] font-semibold text-center hover:bg-navy-light transition-colors">
-                Solicitar
+                className="block w-full py-2 rounded-full bg-navy text-white text-[11px] font-semibold text-center hover:bg-navy-light transition-colors">
+                Comprar
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-8">
+          <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
+            className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm">
+            Catálogo Completo <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── CATEGORIES ─── */
+function Categories() {
+  return (
+    <section className="section-dark py-20 sm:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">Categorias</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">
+            Tudo para seu <span className="text-gradient">objetivo</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {categories.map((cat) => (
+            <a key={cat.name} href={CONTACT.whatsappLink}
+              target="_blank" rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-white/5 border border-gold/5 hover:border-gold/20 hover:bg-white/[0.07] transition-all duration-300">
+              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 group-hover:scale-110 transition-all">
+                <FlaskRound className="w-6 h-6 text-gold" />
+              </div>
+              <span className="text-white text-xs font-semibold text-center leading-tight">{cat.name}</span>
+              <span className="text-white/30 text-[10px]">{cat.sub.length} opções</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── PLANS ─── */
+function Plans() {
+  return (
+    <section id="planos" className="section-light py-20 sm:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Assinatura</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mt-3 leading-tight">
+            Planos de <span className="text-gradient">Suplementação</span>
+          </h2>
+          <p className="text-muted mt-4 text-sm sm:text-base leading-relaxed">
+            Receba seus suplementos todo mês com frete grátis em Franca.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {planos.map((plano) => (
+            <div key={plano.name} className={`relative rounded-2xl p-6 sm:p-8 transition-all duration-300 ${plano.highlight ? "bg-navy text-white shadow-gold-lg border border-gold/30 scale-105" : "bg-white border border-gold/10 hover:border-gold/20"}`}>
+              {plano.highlight && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gold text-navy text-[10px] font-bold tracking-wider uppercase">
+                  Mais Popular
+                </div>
+              )}
+              <h3 className={`text-lg font-bold mb-1 ${plano.highlight ? "text-gold" : "text-navy"}`}>{plano.name}</h3>
+              <p className={`text-3xl font-bold mb-1 ${plano.highlight ? "text-white" : "text-navy"}`}>{plano.price}</p>
+              <p className="text-xs text-muted mb-6">{plano.desc}</p>
+              <div className="space-y-3 mb-6">
+                {plano.items.map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm">
+                    <CheckCircle className={`w-4 h-4 ${plano.highlight ? "text-gold" : "text-green-500"} shrink-0`} />
+                    <span className={plano.highlight ? "text-white/80" : "text-muted"}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
+                className={plano.highlight
+                  ? "btn-gold w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold"
+                  : "btn-navy w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm"}>
+                Assinar Agora
               </a>
             </div>
           ))}
@@ -316,12 +330,12 @@ function Products() {
 /* ─── TESTIMONIALS ─── */
 function Testimonials() {
   return (
-    <section className="section-dark py-20 sm:py-28">
+    <section id="depoimentos" className="section-dark py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">Depoimentos</span>
+          <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">Resultados Reais</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">
-            O que dizem sobre nós
+            O que nossos atletas dizem
           </h2>
         </div>
 
@@ -331,9 +345,14 @@ function Testimonials() {
               className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-gold/10 hover:border-gold/20 transition-all duration-300">
               <Quote className="w-8 h-8 text-gold/30 mb-4" />
               <p className="text-white/70 text-sm leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
-              <div>
-                <p className="text-white font-semibold text-sm">{t.name}</p>
-                <p className="text-white/40 text-xs">{t.role}</p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/30 to-gold/10 flex items-center justify-center text-gold text-xs font-bold">
+                  {t.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">{t.name}</p>
+                  <p className="text-white/40 text-xs">{t.role}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -349,23 +368,22 @@ function AboutContact() {
     <section id="contato" className="section-light py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* About */}
           <div>
-            <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Sobre</span>
+            <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Quem somos</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy mt-3 mb-6 leading-tight">
-              Excelência em <span className="text-gradient">Manipulação</span>
+              Suplementos <span className="text-gradient">Inteligentes</span>
             </h2>
             <p className="text-muted text-sm leading-relaxed mb-6">
-              Farmácia Sete Lírios — referência em Franca/SP. Mais de 12 anos de experiência 
-              em fórmulas magistrais, com rigoroso controle de qualidade, insumos certificados 
-              ANVISA e atendimento farmacêutico humanizado.
+              Farmácia Sete Lírios — mais de 12 anos manipulando suplementos em Franca/SP. 
+              Matéria-prima certificada, fórmulas personalizadas e preço justo. 
+              Creatina, whey, pré-treino e vitaminas manipulados sob medida para você.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               {[
-                { icon: Shield, text: "Insumos certificados ANVISA" },
-                { icon: Award, text: "Farmácia autorizada AFE" },
-                {icon: Star, text: `★ ${CONTACT.rating} — ${CONTACT.followers.toLocaleString()} seguidores`},
+                { icon: Shield, text: "Matéria-prima certificada ANVISA" },
+                { icon: TrendingUp, text: "Até 40% mais barato" },
                 { icon: CheckCircle, text: "Manipulação sob prescrição" },
+                { icon: Star, text: `★ ${CONTACT.rating} — ${CONTACT.followers.toLocaleString()} seguidores` },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-sm text-navy">
                   <item.icon className="w-4 h-4 text-gold shrink-0" />
@@ -375,11 +393,10 @@ function AboutContact() {
             </div>
           </div>
 
-          {/* Contact */}
           <div>
             <span className="text-gold-dark text-xs tracking-[0.3em] uppercase font-medium">Contato</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy mt-3 mb-6 leading-tight">
-              Fale conosco
+              Faça seu pedido
             </h2>
             <div className="space-y-4">
               {[
@@ -402,10 +419,9 @@ function AboutContact() {
                 </div>
               ))}
             </div>
-
             <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm mt-6">
-              <MessageCircle className="w-4 h-4" /> Fale pelo WhatsApp
+              <MessageCircle className="w-4 h-4" /> Pedir pelo WhatsApp
             </a>
           </div>
         </div>
@@ -422,18 +438,20 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo-sete-lirios.jpg" alt="" className="w-10 h-10 rounded-full ring-2 ring-gold/20" />
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-bold text-navy text-sm">
+                SL
+              </div>
               <div>
                 <p className="font-bold text-white">Sete <span className="text-gold">Lírios</span></p>
-                <p className="text-[10px] text-white/40 uppercase tracking-wider">Farmácia de Manipulação</p>
+                <p className="text-[10px] text-white/40 uppercase tracking-wider">{CONTACT.subtitleShort}</p>
               </div>
             </div>
             <p className="text-white/40 text-xs leading-relaxed">
-              Referência em manipulação farmacêutica em Franca/SP. Fórmulas personalizadas com excelência.
+              Suplementos manipulados em Franca/SP. Performance pura, preço justo.
             </p>
           </div>
           {[
-            { title: "Serviços", items: ["Manipulação Magistral", "Alta Performance", "Fitoterápicos", "Dermatologia"] },
+            { title: "Suplementos", items: ["Creatina", "Whey Protein", "Pré-Treino", "BCAA", "Vitaminas"] },
             { title: "Categorias", items: categories.slice(0, 4).map((c) => c.name) },
             { title: "Contato", items: [CONTACT.address, CONTACT.phone1, CONTACT.hours] },
           ].map((col) => (
@@ -448,17 +466,11 @@ function Footer() {
           ))}
         </div>
         <div className="border-t border-gold/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs">© {new Date().getFullYear()} Sete Lírios. Todos os direitos reservados.</p>
+          <p className="text-white/30 text-xs">© {new Date().getFullYear()} Sete Lírios Suplementos. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4">
-            <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors">
-              <MessageCircle className="w-4 h-4" />
-            </a>
-            <a href={CONTACT.instagramHref} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors">
-              <Instagram className="w-4 h-4" />
-            </a>
-            <a href={CONTACT.mapsHref} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors">
-              <MapPin className="w-4 h-4" />
-            </a>
+            <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors"><MessageCircle className="w-4 h-4" /></a>
+            <a href={CONTACT.instagramHref} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors"><Instagram className="w-4 h-4" /></a>
+            <a href={CONTACT.mapsHref} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-colors"><MapPin className="w-4 h-4" /></a>
           </div>
         </div>
       </div>
@@ -485,10 +497,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <StatsBar />
-        <Services />
-        <Categories />
+        <Benefits />
         <Products />
+        <Categories />
+        <Plans />
         <Testimonials />
         <AboutContact />
       </main>
