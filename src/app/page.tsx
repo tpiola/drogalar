@@ -121,7 +121,7 @@ function Hero() {
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#f5f7f3] via-[#e8f0e8] to-[#f5f7f3]" />
       <motion.div
         style={{ y, opacity, backgroundImage: "radial-gradient(circle at 25% 50%, var(--brand) 0%, transparent 50%)" }}
         className="absolute inset-0 opacity-[0.03]"
@@ -358,7 +358,7 @@ function Cta() {
           className="relative overflow-hidden rounded-2xl p-10 md:p-16 text-center"
           style={{
             background:
-              "linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1a1a2e 100%)",
+              "linear-gradient(135deg, #e8f0e8 0%, #d4e0d4 50%, #e8f0e8 100%)",
           }}
         >
           <div className="absolute inset-0 opacity-[0.05]"
