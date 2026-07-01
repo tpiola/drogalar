@@ -317,7 +317,7 @@ function Differentials() {
           className="text-center mb-16"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-brand-light mb-4">
-            <Shield className="w-4 h-4" /> Por que escolher a Drogalar
+            <Shield className="w-4 h-4" /> Por que escolher a Sete Lírios
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Seu tratamento em{" "}
@@ -410,7 +410,7 @@ function Contact() {
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Fale com a{" "}
-            <span className="text-gradient">Drogalar</span>
+            <span className="text-gradient">Sete Lírios</span>
           </h2>
           <p className="text-muted text-lg">
             Estamos prontos para atender você.
