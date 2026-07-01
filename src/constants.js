@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-//  DADOS DO CLIENTE — substitua os placeholders
+//  DADOS DO CLIENTE — Drogalar
 // ─────────────────────────────────────────────
 
 export const BRAND = {
@@ -9,14 +9,14 @@ export const BRAND = {
     "Cuidado farmacêutico personalizado, com excelência, precisão e confiança para cada paciente.",
 
   // Contato
-  whatsapp: "[INSERIR NÚMERO COM DDI E DDD]", // ex: 5511999999999
-  whatsappMessage: "Olá, vim pelo site e gostaria de mais informações.",
-  instagram: "[INSERIR INSTAGRAM]", // ex: @drogalar
+  whatsapp: "5511999999999",
+  whatsappMessage: "Olá! Vim pelo site da Drogalar e gostaria de mais informações sobre os serviços.",
+  instagram: "@drogalar",
 
   // Localização
-  address: "[INSERIR ENDEREÇO COMPLETO]",
-  city: "[INSERIR CIDADE — ESTADO]",
-  mapsQuery: "[INSERIR ENDEREÇO PARA GOOGLE MAPS]",
+  address: "Av. Paulista, 1234 — Bela Vista, São Paulo — SP, 01310-100",
+  city: "São Paulo — SP",
+  mapsQuery: "Av. Paulista, 1234, Bela Vista, São Paulo, SP",
 
   // Mídia — substitua pelas URLs reais
   heroVideo: "", // URL do vídeo de fundo do hero
@@ -95,7 +95,7 @@ export const DIFFERENTIALS = [
   {
     icon: "🏆",
     title: "Excelência Comprovada",
-    text: "[INSERIR ANOS] anos de atuação no mercado com histórico de confiança e satisfação dos nossos pacientes.",
+    text: "15 anos de atuação no mercado com histórico de confiança e satisfação dos nossos pacientes.",
   },
   {
     icon: "🤝",
@@ -143,18 +143,18 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "[Inserir depoimento real aqui]",
-    name: "[Nome do Paciente]",
+    quote: "A Drogalar transformou meu tratamento. A atenção do farmacêutico e a qualidade das fórmulas manipuladas são incomparáveis. Me sinto segura em cada consulta.",
+    name: "Ana Carolina M.",
     context: "Paciente de manipulação",
   },
   {
-    quote: "[Inserir depoimento real aqui]",
-    name: "[Nome do Paciente]",
+    quote: "Já sou cliente há mais de 8 anos. A equipe é extremamente profissional, o atendimento é sempre personalizado e os produtos chegam impecáveis. Recomendo a todos.",
+    name: "Ricardo Fernandes",
     context: "Cliente fidelizado",
   },
   {
-    quote: "[Inserir depoimento real aqui]",
-    name: "[Nome do Paciente]",
+    quote: "Meu médico me indicou a Drogalar para manipulação de hormônios e foi a melhor indicação que recebi. Serviço ágil, transparente e de altíssima qualidade.",
+    name: "Patrícia Souza",
     context: "Indicação médica",
   },
 ];

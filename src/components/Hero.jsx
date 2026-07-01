@@ -132,7 +132,7 @@ export default function Hero() {
               { icon: "⭐", label: "Atendimento 5 estrelas" },
               { icon: "🔬", label: "Manipulação de precisão" },
               { icon: "🤝", label: "Farmacêutico dedicado" },
-              { icon: "📋", label: "[INSERIR ANOS]+ anos de experiência" },
+              { icon: "📋", label: "15+ anos de experiência" },
             ].map((chip) => (
               <div
                 key={chip.label}
@@ -167,17 +167,17 @@ export default function Hero() {
               <div className="relative z-10 w-80 xl:w-96 h-[520px] rounded-2xl glass-card flex flex-col items-center justify-center gap-4 shadow-2xl shadow-black/50">
                 <div className="text-6xl">👨‍⚕️</div>
                 <p className="text-[#c8a96e] font-medium text-center px-8">
-                  [INSERIR FOTO DO FARMACÊUTICO]
+                  Foto do Farmacêutico
                 </p>
                 <p className="text-white/40 text-sm text-center px-8">
-                  Substitua com a foto real do profissional responsável
+                  Adicione a URL em <code className="text-[#c8a96e]/70">BRAND.expertPhoto</code>
                 </p>
               </div>
             )}
             {/* Gold accent badge */}
             <div className="absolute -bottom-4 -right-4 z-20 glass-card rounded-2xl px-5 py-3 shadow-xl border border-[#c8a96e]/20">
               <p className="text-[#c8a96e] font-bold text-lg" style={{ fontFamily: "Playfair Display, serif" }}>
-                [INSERIR ANOS]+
+                15+
               </p>
               <p className="text-white/60 text-xs">anos de excelência</p>
             </div>

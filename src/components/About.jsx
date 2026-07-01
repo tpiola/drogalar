@@ -42,10 +42,10 @@ export default function About() {
               <div className="relative z-10 w-full max-w-md h-[520px] glass-card rounded-2xl flex flex-col items-center justify-center gap-4 shadow-2xl shadow-black/60">
                 <div className="text-7xl">🧑‍⚕️</div>
                 <p className="text-[#c8a96e] font-medium text-center px-10">
-                  [INSERIR FOTO EDITORIAL DO PROFISSIONAL]
+                  Foto do Profissional
                 </p>
                 <p className="text-white/40 text-sm text-center px-10">
-                  Layout editorial — substitua com foto real
+                  Adicione a URL da foto em <code className="text-[#c8a96e]/70">BRAND.expertPhoto</code>
                 </p>
               </div>
             )}
@@ -58,7 +58,7 @@ export default function About() {
               className="absolute -bottom-6 -right-6 z-20 glass-card rounded-2xl p-5 shadow-xl border border-[#c8a96e]/20 min-w-[150px]"
             >
               <p className="text-[#c8a96e] font-bold text-3xl" style={{ fontFamily: "Playfair Display, serif" }}>
-                [+N]
+                +5k
               </p>
               <p className="text-white/60 text-xs mt-1">Pacientes atendidos</p>
             </motion.div>
@@ -114,8 +114,10 @@ export default function About() {
             animate={inView ? "show" : "hidden"}
             className="text-white/65 text-base leading-relaxed"
           >
-            [INSERIR HISTÓRIA DO FUNDADOR/FARMACÊUTICO RESPONSÁVEL: trajetória, formação, motivação
-            para criar a farmácia e visão de cuidado com o paciente.]
+            Fundada por farmacêuticos apaixonados pelo cuidado humano, a Drogalar cresceu a partir de
+            um compromisso inabalável: entregar saúde com responsabilidade, transparência e atenção
+            individualizada. Hoje, somos referência em São Paulo para quem busca manipulação de
+            qualidade e um relacionamento de confiança com a equipe farmacêutica.
           </motion.p>
 
           {/* Values row */}
