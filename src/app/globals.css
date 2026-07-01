@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #2563eb;
+  --color-brand-light: #60a5fa;
+  --color-brand-dark: #1d4ed8;
+  --color-surface: #f8fafc;
+  --color-surface-elevated: #ffffff;
+  --color-foreground: #1e293b;
+  --color-muted: #64748b;
+  --color-border: rgba(37, 99, 235, 0.1);
+  --color-gold: #d4a574;
+  --color-gold-light: #f5e6d3;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
+}
+:root {
+  --brand: #2563eb;
+  --brand-light: #60a5fa;
+  --brand-glow: rgba(37, 99, 235, 0.08);
+  --gold: #d4a574;
+  --surface: #0f172a;
+  --surface-elevated: #1e293b;
+  --foreground: #f1f5f9;
+  --muted: #94a3b8;
+  --border: rgba(96, 165, 250, 0.12);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0; overflow-x: hidden;
+  background: var(--surface);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: color-mix(in srgb, var(--brand) 20%, transparent);
+}
+
+.container-drop {
+  max-width: 80rem; margin: 0 auto;
+  padding-left: 1.25rem; padding-right: 1.25rem;
+}
+@media (min-width: 640px) {
+  .container-drop { padding-left: 2rem; padding-right: 2rem; }
+}
+
+.section-pad { padding-top: 5rem; padding-bottom: 5rem; }
+@media (min-width: 768px) { .section-pad { padding-top: 7rem; padding-bottom: 7rem; } }
+
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+.glass-gold {
+  background: linear-gradient(135deg, rgba(212,165,116,0.06), rgba(37,99,235,0.04));
+  border: 1px solid rgba(212,165,116,0.15);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--brand);
+  color: white;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+}
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  border-color: var(--brand);
+  background: rgba(37,99,235,0.05);
+}
+
+.card-premium {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--brand) 25%, transparent);
+  box-shadow: 0 12px 40px rgba(37,99,235,0.08);
+}
+
+@media (pointer: coarse) and (max-width: 640px) {
+  a, button, [role="button"] { min-height: 44px; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fade-up { animation: fadeInUp 0.8s ease both; }
