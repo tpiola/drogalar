@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0a0f1a;
+    color: #f0f4ff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #25d366;
+  animation: pulse-ring 1.8s ease-out infinite;
+  z-index: -1;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #c8a96e 0%, #f0d99e 40%, #c8a96e 60%, #e8c87a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 169, 110, 0.15);
+}
+
+.section-divider {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, #c8a96e, #e8c87a);
+  border-radius: 9999px;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 15, 26, 0.95) 0%,
+    rgba(10, 15, 26, 0.75) 50%,
+    rgba(14, 22, 40, 0.85) 100%
+  );
+}
