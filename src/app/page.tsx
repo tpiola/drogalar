@@ -435,11 +435,13 @@ function Contact() {
               icon: MapPin,
               label: "Endereço",
               value: CONTACT.address,
+              href: CONTACT.mapsHref,
             },
             {
               icon: Clock,
               label: "Horário",
               value: CONTACT.hours,
+              href: CONTACT.instagramHref,
             },
           ].map((item) => (
             <div key={item.label} className="card-premium flex items-center gap-4">

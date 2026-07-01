@@ -7,7 +7,9 @@ export const CONTACT = {
   whatsapp: "(16) 99244-0470",
   whatsappLink: "https://wa.me/5516992440470",
   phoneHref: "tel:551637223777",
+  mapsHref: "https://maps.google.com/?q=Av.+Brasil+815+Franca+SP",
   email: "contato@setelirios.com.br",
+  emailHref: "mailto:contato@setelirios.com.br",
   address: "Av. Brasil, 815 — Vila Aparecida, Franca/SP",
   cep: "14401-240",
   hours: "Seg-Sex 08h-20h | Sáb 08h-18h",
@@ -15,6 +17,7 @@ export const CONTACT = {
   reviews: 4,
   followers: 8630,
   instagram: "@farmaciasetelirios",
+  instagramHref: "https://instagram.com/farmaciasetelirios",
   services: ["Fórmulas alopáticas", "Alta Performance", "Manipulação Magistral", "Fitoterápicos"],
   category: "Medical & health",
 };
