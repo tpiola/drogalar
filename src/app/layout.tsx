@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased bg-[#f8f9f8] text-[#2c3e50]`}
+        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
       >
         {children}
       </body>

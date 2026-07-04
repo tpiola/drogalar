@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { CONTACT, categories, featuredProducts } from "./data";
+import ThreeBackground from "@/components/ThreeBackground";
+import AIAssistant from "@/components/AIAssistant";
 
 const navLinks = [
   { label: "Início", href: "#" },
@@ -131,6 +133,7 @@ function Hero() {
 
   return (
     <section className="relative h-dvh min-h-[600px] sm:min-h-[700px] flex items-center overflow-hidden bg-navy">
+      <ThreeBackground />
       <motion.div className="absolute inset-0" style={{ scale }}>
         <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/30 to-navy/90 z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/60 to-transparent z-10" />
@@ -582,6 +585,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFab />
+      <AIAssistant />
     </div>
   );
 }
