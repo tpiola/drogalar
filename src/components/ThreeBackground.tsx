@@ -1,140 +1,125 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function ThreeBackground() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    if (!mounted) return;
-    let cleanup = false;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    const loadThree = async () => {
-      try {
-        const THREE = await import("three");
-        if (cleanup) return;
+    let running = true;
+    let w = 0, h = 0;
 
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({
-          alpha: true,
-          antialias: true,
-        });
+    const resize = () => {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas!.width = w;
+      canvas!.height = h;
+    };
+    resize();
+    window.addEventListener("resize", resize);
 
-        const container = document.getElementById("three-container");
-        if (!container) return;
+    // Particles
+    const particles: { x: number; y: number; vx: number; vy: number; r: number; a: number }[] = [];
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: 1 + Math.random() * 2,
+        a: 0.1 + Math.random() * 0.3,
+      });
+    }
 
-        const w = container.clientWidth;
-        const h = container.clientHeight;
-        renderer.setSize(w, h);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        container.appendChild(renderer.domElement);
+    // Geometric shapes
+    const shapes: { x: number; y: number; rot: number; size: number; sides: number; speed: number }[] = [];
+    for (let i = 0; i < 8; i++) {
+      shapes.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        rot: Math.random() * Math.PI * 2,
+        size: 15 + Math.random() * 30,
+        sides: Math.random() > 0.5 ? 3 : Math.random() > 0.5 ? 4 : 6,
+        speed: 0.002 + Math.random() * 0.005,
+      });
+    }
 
-        // Floating particles
-        const particlesGeo = new THREE.BufferGeometry();
-        const count = 120;
-        const positions = new Float32Array(count * 3);
-        for (let i = 0; i < count * 3; i++) {
-          positions[i] = (Math.random() - 0.5) * 12;
+    let mouseX = w / 2, mouseY = h / 2;
+    const onMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+    window.addEventListener("mousemove", onMove);
+
+    const gold = "rgba(201, 168, 76,";
+    const goldLight = "rgba(226, 201, 110,";
+
+    const animate = () => {
+      if (!running) return;
+      ctx!.clearRect(0, 0, w, h);
+
+      // Draw particles
+      particles.forEach((p) => {
+        p.x += p.vx + (mouseX - w / 2) * 0.0003;
+        p.y += p.vy + (mouseY - h / 2) * 0.0003;
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+
+        ctx!.beginPath();
+        ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx!.fillStyle = gold + p.a + ")";
+        ctx!.fill();
+      });
+
+      // Draw shapes
+      shapes.forEach((s) => {
+        s.rot += s.speed;
+        s.x += (mouseX - w / 2) * 0.0001;
+        s.y += (mouseY - h / 2) * 0.0001;
+
+        ctx!.save();
+        ctx!.translate(s.x, s.y);
+        ctx!.rotate(s.rot);
+        ctx!.strokeStyle = goldLight + "0.15)";
+        ctx!.lineWidth = 1;
+        ctx!.beginPath();
+        for (let i = 0; i <= s.sides; i++) {
+          const angle = (i / s.sides) * Math.PI * 2;
+          const px = Math.cos(angle) * s.size;
+          const py = Math.sin(angle) * s.size;
+          if (i === 0) ctx!.moveTo(px, py);
+          else ctx!.lineTo(px, py);
         }
-        particlesGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        ctx!.closePath();
+        ctx!.stroke();
+        ctx!.restore();
+      });
 
-        const particlesMat = new THREE.PointsMaterial({
-          color: 0xc9a84c,
-          size: 0.03,
-          transparent: true,
-          opacity: 0.4,
-          blending: THREE.AdditiveBlending,
-        });
-        const particles = new THREE.Points(particlesGeo, particlesMat);
-        scene.add(particles);
-
-        // Geometric shapes
-        const shapes: THREE.Mesh[] = [];
-        const colors = [0xc9a84c, 0xe2c96e, 0xa88a2e, 0xd4a574];
-        for (let i = 0; i < 6; i++) {
-          const geo = new THREE.IcosahedronGeometry(0.15 + Math.random() * 0.2, 0);
-          const mat = new THREE.MeshBasicMaterial({
-            color: colors[i % colors.length],
-            transparent: true,
-            opacity: 0.15 + Math.random() * 0.15,
-            wireframe: Math.random() > 0.5,
-          });
-          const mesh = new THREE.Mesh(geo, mat);
-          mesh.position.set(
-            (Math.random() - 0.5) * 6,
-            (Math.random() - 0.5) * 6,
-            (Math.random() - 0.5) * 4 - 2
-          );
-          mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
-          scene.add(mesh);
-          shapes.push(mesh);
-        }
-
-        camera.position.z = 4;
-
-        // Mouse tracking
-        let mouseX = 0, mouseY = 0;
-        const onMove = (e: MouseEvent) => {
-          mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-          mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-        };
-        window.addEventListener("mousemove", onMove);
-
-        // Animation
-        const animate = () => {
-          if (cleanup) return;
-          requestAnimationFrame(animate);
-
-          particles.rotation.y += 0.001;
-          particles.rotation.x += 0.0005;
-
-          shapes.forEach((s, i) => {
-            s.rotation.x += 0.005 + i * 0.001;
-            s.rotation.y += 0.008 + i * 0.001;
-          });
-
-          camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.02;
-          camera.position.y += (-mouseY * 0.5 - camera.position.y) * 0.02;
-          camera.lookAt(0, 0, 0);
-
-          renderer.render(scene, camera);
-        };
-        animate();
-
-        // Resize
-        const onResize = () => {
-          const w2 = container.clientWidth;
-          const h2 = container.clientHeight;
-          camera.aspect = w2 / h2;
-          camera.updateProjectionMatrix();
-          renderer.setSize(w2, h2);
-        };
-        window.addEventListener("resize", onResize);
-
-        cleanup = () => {
-          window.removeEventListener("mousemove", onMove);
-          window.removeEventListener("resize", onResize);
-          renderer.dispose();
-          if (container.contains(renderer.domElement)) {
-            container.removeChild(renderer.domElement);
-          }
-        };
-      } catch (e) {
-        console.log("3D disabled:", e);
-      }
+      requestAnimationFrame(animate);
     };
 
-    loadThree();
-    return () => { cleanup = true; };
-  }, [mounted]);
+    const animId = requestAnimationFrame(animate);
+
+    return () => {
+      running = false;
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", onMove);
+    };
+  }, []);
 
   return (
-    <div
-      id="three-container"
+    <canvas
+      ref={canvasRef}
       className="absolute inset-0 z-0 pointer-events-none"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.5 }}
     />
   );
 }
