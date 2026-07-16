@@ -1,20 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import LGPDPopup from "@/components/LGPDPopup";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -176,9 +164,7 @@ export default function RootLayout({
           as="script"
         />
       </head>
-      <body
-        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
-      >
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
         <SpeedInsights />
