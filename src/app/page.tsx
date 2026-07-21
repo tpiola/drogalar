@@ -1,5 +1,6 @@
 import { ArrowRight, Check, Clock3, Instagram, MapPin, Menu, MessageCircle, Phone, Search, ShieldCheck, ShoppingBag, Zap } from "lucide-react";
 import { BUSINESS, faq, goals, products, services, steps, whatsappUrl } from "./data";
+import ConversionTracking from "@/components/ConversionTracking";
 
 const quoteUrl = whatsappUrl("Olá! Quero solicitar um orçamento. Vou enviar a foto da minha receita.");
 
@@ -20,7 +21,7 @@ export default function Home() {
           <p className="eyebrow"><Zap /> Prevenção é performance diária</p>
           <h1>Prepare o corpo para <em>ir além.</em></h1>
           <p className="lead">Vitaminas, minerais, antioxidantes e fórmulas personalizadas para complementar sua rotina com orientação farmacêutica.</p>
-          <div className="actions"><a className="button" href="#produtos"><ShoppingBag />Explorar produtos</a><a className="textLink" href={quoteUrl} target="_blank" rel="noreferrer">Enviar receita <ArrowRight /></a></div>
+          <div className="actions"><a className="button" href="#produtos" data-hero-cta="true"><ShoppingBag />Explorar produtos</a><a className="textLink" href={quoteUrl} data-intent="prescription" target="_blank" rel="noreferrer">Enviar receita <ArrowRight /></a></div>
           <p className="microcopy"><ShieldCheck />A dispensação e a manipulação seguem as exigências aplicáveis a cada fórmula.</p>
         </div>
         <div className="heroVisual" aria-label="Bancada farmacêutica ilustrativa">
@@ -35,7 +36,7 @@ export default function Home() {
 
       <section id="objetivos" className="section shopSection">
         <div className="shopTitle"><div><p className="eyebrow">Encontre do seu jeito</p><h2>Compre por objetivo.</h2></div><a className="textLink" href="#produtos">Ver vitrine <ArrowRight /></a></div>
-        <div className="goalGrid">{goals.map(goal => <a href={whatsappUrl(`Olá! Quero conhecer os produtos para ${goal.label.toLowerCase()}.`)} target="_blank" rel="noreferrer" className={`goal ${goal.tone}`} key={goal.label}><span>{goal.code}</span><b>{goal.label}</b><ArrowRight /></a>)}</div>
+        <div className="goalGrid">{goals.map(goal => <a href={whatsappUrl(`Olá! Quero conhecer os produtos para ${goal.label.toLowerCase()}.`)} data-category={goal.label} data-intent="category" target="_blank" rel="noreferrer" className={`goal ${goal.tone}`} key={goal.label}><span>{goal.code}</span><b>{goal.label}</b><ArrowRight /></a>)}</div>
       </section>
 
       <section id="produtos" className="section productSection">
@@ -43,7 +44,7 @@ export default function Home() {
         <div className="productGrid">{products.map(product => <article className="productCard" key={product.name}>
           <div className={`productVisual ${product.tone}`}>{product.tag && <span className="tag">{product.tag}</span>}<div className="productBottle"><small>SETE LÍRIOS</small><strong>{product.name}</strong><span>{product.detail}</span></div></div>
           <p>{product.goal}</p><h3>{product.name}</h3><span className="productDetail">{product.detail}</span>
-          <a href={whatsappUrl(`Olá! Quero consultar disponibilidade e valor de ${product.name} — ${product.detail}.`)} target="_blank" rel="noreferrer">Consultar produto <ArrowRight /></a>
+          <a href={whatsappUrl(`Olá! Quero consultar disponibilidade e valor de ${product.name} — ${product.detail}.`)} data-product={product.name} data-intent="product" target="_blank" rel="noreferrer">Consultar produto <ArrowRight /></a>
         </article>)}</div>
         <p className="disclaimer">Imagens ilustrativas. Composição, concentração, apresentação, disponibilidade e necessidade de prescrição devem ser confirmadas com a equipe farmacêutica.</p>
       </section>
@@ -76,7 +77,8 @@ export default function Home() {
       </section>
     </main>
 
-    <footer><a className="brand" href="#inicio"><span className="brandMark">SL</span><span>Sete Lírios<small>Farmácia de Manipulação</small></span></a><p>© {new Date().getFullYear()} Sete Lírios. Conteúdo informativo.</p><a href={quoteUrl} target="_blank" rel="noreferrer">WhatsApp: {BUSINESS.whatsappLabel}</a></footer>
+    <footer><a className="brand" href="#inicio"><span className="brandMark">SL</span><span>Sete Lírios<small>Farmácia de Manipulação</small></span></a><p>© {new Date().getFullYear()} Sete Lírios. Conteúdo informativo. · <a href="/privacidade">Privacidade</a></p><a href={quoteUrl} data-intent="footer" target="_blank" rel="noreferrer">WhatsApp: {BUSINESS.whatsappLabel}</a></footer>
     <a className="whatsappFab" href={quoteUrl} target="_blank" rel="noreferrer" aria-label="Solicitar orçamento pelo WhatsApp"><MessageCircle /></a>
+    <ConversionTracking />
   </>;
 }
