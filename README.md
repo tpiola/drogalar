@@ -1,12 +1,6 @@
-# Drogalar
+# Sete Lírios
 
-Site avançado de drogaria e manipulação — plataforma premium para clientes do setor farmacêutico, com catálogo de produtos e serviços de manipulação.
-
-## Stack
-
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
+Vitrine digital premium da Sete Lírios, farmácia de manipulação focada em prevenção, vitaminas, suplementos e atendimento consultivo.
 
 ## Desenvolvimento
 
@@ -15,14 +9,9 @@ npm install
 npm run dev
 ```
 
-Abra http://localhost:3000 para ver o resultado.
-
-## Build
+## Validação
 
 ```bash
+npm run typecheck
 npm run build
 ```
-
-## Deploy
-
-Deploy automático via Vercel a cada push na branch `main`.
