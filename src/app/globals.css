@@ -5,3 +5,11 @@
 @media(max-width:900px){nav,.topbar>.button{display:none}.mobileMenu{display:block;margin-left:auto;position:relative}.mobileMenu summary{list-style:none}.mobileMenu div{position:absolute;right:0;top:42px;background:var(--paper);border:2px solid var(--ink);width:220px;padding:10px;box-shadow:6px 6px 0 var(--ink)}.mobileMenu a{display:block;padding:12px;text-transform:uppercase;font-size:11px;font-weight:900}.hero{grid-template-columns:1fr;padding-top:65px}.heroVisual{height:520px}.goalGrid{grid-template-columns:repeat(3,1fr)}.productGrid{grid-template-columns:repeat(2,1fr)}.serviceGrid{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.prescription{align-items:flex-start;flex-direction:column}.steps{grid-template-columns:1fr}.steps article{border-right:0;border-bottom:1px solid var(--line)}}
 @media(max-width:580px){.section{padding-inline:20px}.topbar{padding-inline:20px}.hero h1{font-size:52px}.heroVisual{min-height:420px;height:430px}.bottle{width:150px;height:245px;padding:72px 15px 15px}.bottle:before{width:82px;left:34px}.bottle b{font-size:20px}.bottleOne{left:3%}.bottleTwo{right:1%}.seal{width:92px;height:92px}.trustStrip{grid-template-columns:1fr;gap:8px}.goalGrid{grid-template-columns:repeat(2,1fr)}.goal{min-height:145px}.productGrid{grid-template-columns:1fr}.productVisual{height:350px}.shopTitle{align-items:flex-start;flex-direction:column;gap:18px}.serviceGrid{grid-template-columns:1fr}.actions{align-items:flex-start;flex-direction:column}.prescription{gap:25px}footer{align-items:flex-start;flex-direction:column;gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px;border-radius:4px}
+.legalPage{min-height:100vh;background:var(--cream);color:var(--ink);padding:48px 24px 96px}
+.legalPage>div{width:min(760px,100%);margin:0 auto}
+.legalBack{display:inline-flex;margin-bottom:48px;color:var(--green);font-weight:800;text-decoration:none}
+.legalPage h1{font-size:clamp(42px,7vw,72px);line-height:.95;letter-spacing:-.05em;margin-bottom:18px}
+.legalPage h2{font-size:24px;margin:38px 0 10px}
+.legalPage p{color:var(--muted);line-height:1.75;margin:10px 0}
+.legalPage a{color:var(--green);font-weight:750}
