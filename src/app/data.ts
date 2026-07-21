@@ -1,136 +1,53 @@
-export const CONTACT = {
+export const BUSINESS = {
   name: "Sete Lírios",
-  subtitle: "Farmácia de Manipulação • Suplementos Esportivos",
-  subtitleShort: "Suplementos Esportivos",
-  phone1: "(16) 3722-3777",
-  phone2: "(16) 3722-3026",
-  phone3: "(16) 9 9336-3643",
-  whatsapp: "(16) 99244-0470",
-  whatsappLink: "https://wa.me/5516992440470",
-  phoneHref: "tel:551637223777",
-  mapsHref: "https://maps.google.com/?q=Av.+Brasil+815+Franca+SP",
-  email: "contato@setelirios.com.br",
-  emailHref: "mailto:contato@setelirios.com.br",
+  whatsapp: "5516992440470",
+  whatsappLabel: "(16) 99244-0470",
+  phone: "(16) 3722-3777",
+  phoneHref: "tel:+551637223777",
   address: "Av. Brasil, 815 — Vila Aparecida, Franca/SP",
-  cep: "14401-240",
-  hours: "Seg-Sex 08h-20h | Sáb 08h-18h",
-  rating: 5.0,
-  reviews: 4,
-  followers: 8630,
-  instagram: "@farmaciasetelirios",
-  instagramHref: "https://instagram.com/farmaciasetelirios",
-  services: ["Suplementos Esportivos", "Manipulação Magistral", "Vitaminas Personalizadas", "Fitoterápicos"],
-  category: "Medical & health",
+  maps: "https://maps.google.com/?q=Av.+Brasil+815+Franca+SP",
+  instagram: "https://instagram.com/farmaciasetelirios",
+  hours: "Segunda a sexta, 8h–20h · Sábado, 8h–18h",
 };
 
-export const categories = [
-  {
-    name: "Alta Performance",
-    slug: "alta-performance",
-    sub: ["Creatina Monohidratada", "Whey Protein Isolado", "Pré-Treino Explosivo", "BCAA + Glutamina", "Beta-Alanina", "Citrulina Malato"],
-  },
-  {
-    name: "Vitaminas",
-    slug: "vitaminas",
-    sub: ["Vitamina D3 5.000 UI", "Vitamina C Lipossomal", "Complexo B", "Ômega 3 EPA/DHA", "Magnésio Dimalato", "Zinco Quelado"],
-  },
-  {
-    name: "Emagrecimento",
-    slug: "emagrecimento",
-    sub: ["Termogênicos Naturais", "L-Carnitina", "CLA", "Cafeína Anidra", "Cromo quelado", "Spirulina"],
-  },
-  {
-    name: "Hormônios",
-    slug: "hormonios",
-    sub: ["Reposição Hormonal Feminina", "Reposição Hormonal Masculina", "Melatonina", "DHEA", "Progesterona", "Testosterona"],
-  },
-  {
-    name: "Fitoterápicos",
-    slug: "fitoterapicos",
-    sub: ["Calmantes Naturais", "Adaptógenos", "Ashwagandha", "Tribulus Terrestris", "Ginseng", "Maca Peruana"],
-  },
-  {
-    name: "Saúde",
-    slug: "saude",
-    sub: ["Colágeno Hidrolisado", "Probióticos", "Queratina", "Colágeno com VC", "Coenzima Q10", "Resveratrol"],
-  },
+export function whatsappUrl(message: string) {
+  return `https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+export const services = [
+  { title: "Medicamentos manipulados", text: "Preparações individualizadas conforme prescrição, com orientação farmacêutica." },
+  { title: "Dermocosméticos", text: "Formulações personalizadas para rotinas de cuidado indicadas por profissional habilitado." },
+  { title: "Vitaminas e minerais", text: "Opções sob medida, respeitando concentração, forma farmacêutica e prescrição." },
+  { title: "Fitoterápicos", text: "Fórmulas de origem vegetal preparadas com rastreabilidade e critérios farmacêuticos." },
 ];
 
-export const featuredProducts = [
-  {
-    name: "Creatina Monohidratada 300g",
-    category: "Alta Performance",
-    price: "R$ 89,90",
-    parcel: "ou 3x de R$ 29,97",
-    badge: "Mais Vendido",
-    badgeColor: "bg-green-500/10 text-green-400",
-    image: null,
-  },
-  {
-    name: "Whey Protein Isolado 900g",
-    category: "Alta Performance",
-    price: "R$ 149,90",
-    parcel: "ou 6x de R$ 24,98",
-    badge: "Promoção",
-    badgeColor: "bg-gold/10 text-gold",
-    image: null,
-  },
-  {
-    name: "Pré-Treino Explosivo 300g",
-    category: "Alta Performance",
-    price: "R$ 119,90",
-    parcel: "ou 6x de R$ 19,98",
-    badge: "Novo",
-    badgeColor: "bg-green-500/10 text-green-400",
-    image: null,
-  },
-  {
-    name: "BCAA + Glutamina 200g",
-    category: "Recuperação",
-    price: "R$ 69,90",
-    parcel: "ou 3x de R$ 23,30",
-    badge: null,
-    badgeColor: null,
-    image: null,
-  },
-  {
-    name: "Ômega 3 EPA/DHA 120 caps",
-    category: "Vitaminas",
-    price: "R$ 59,90",
-    parcel: "ou 3x de R$ 19,97",
-    badge: "Manipulado",
-    badgeColor: "bg-gold/10 text-gold",
-    image: null,
-  },
-  {
-    name: "Vitamina D3 5.000 UI 60 caps",
-    category: "Vitaminas",
-    price: "R$ 39,90",
-    parcel: "ou 2x de R$ 19,95",
-    badge: null,
-    badgeColor: null,
-    image: null,
-  },
+export const goals = [
+  { label: "Imunidade", code: "IMU", tone: "lime" },
+  { label: "Energia", code: "ENE", tone: "orange" },
+  { label: "Sono", code: "SON", tone: "blue" },
+  { label: "Foco", code: "FOC", tone: "violet" },
+  { label: "Ossos", code: "OSS", tone: "sand" },
+  { label: "Antioxidantes", code: "ANT", tone: "red" },
 ];
 
-export const planos = [
-  {
-    name: "START",
-    price: "R$ 89/mês",
-    desc: "Para quem está começando",
-    items: ["1 fórmula por mês", "Creatina 300g", "Frete grátis Franca", "Desconto 10%"],
-  },
-  {
-    name: "PRO",
-    price: "R$ 169/mês",
-    desc: "Para atletas dedicados",
-    items: ["2 fórmulas por mês", "Whey + Creatina", "Frete grátis Franca", "Desconto 15%", "Avaliação nutricional"],
-    highlight: true,
-  },
-  {
-    name: "ELITE",
-    price: "R$ 299/mês",
-    desc: "Performance máxima",
-    items: ["3 fórmulas por mês", "Kit completo pré/pós", "Frete grátis Franca", "Desconto 20%", "Acompanhamento mensal"],
-  },
+export const products = [
+  { name: "Vitamina D3 + K2", detail: "60 cápsulas", goal: "Suporte nutricional", tone: "lime", tag: "Mais procurado" },
+  { name: "Magnésio Dimalato", detail: "60 cápsulas", goal: "Rotina e disposição", tone: "orange", tag: null },
+  { name: "Complexo B", detail: "60 cápsulas", goal: "Metabolismo energético", tone: "blue", tag: null },
+  { name: "Coenzima Q10", detail: "60 cápsulas", goal: "Ação antioxidante", tone: "red", tag: "Destaque" },
+  { name: "Ômega 3", detail: "120 cápsulas", goal: "Suplementação diária", tone: "violet", tag: null },
+  { name: "Vitamina C + Zinco", detail: "60 cápsulas", goal: "Suporte nutricional", tone: "sand", tag: null },
+];
+
+export const steps = [
+  { n: "01", title: "Envie sua receita", text: "Fotografe a prescrição inteira, com boa luz e sem cortar as informações." },
+  { n: "02", title: "Receba o orçamento", text: "Nossa equipe confere a fórmula e retorna com prazo, condições e orientações." },
+  { n: "03", title: "Confirme seu pedido", text: "Após a confirmação, a preparação segue para o fluxo farmacêutico." },
+];
+
+export const faq = [
+  ["Preciso de receita?", "Depende da formulação. Medicamentos sujeitos à prescrição só podem ser preparados mediante receita válida. Envie o documento para conferência."],
+  ["Como pedir um orçamento?", "Use o botão de WhatsApp e envie uma foto legível da receita. A equipe verifica a viabilidade, o prazo e as condições."],
+  ["Qual é o prazo de preparo?", "O prazo varia conforme a fórmula e a disponibilidade dos insumos. A previsão é informada no orçamento."],
+  ["Vocês fazem entrega?", "Consulte a equipe no momento do orçamento para confirmar regiões atendidas, prazo e eventual taxa."],
 ];
