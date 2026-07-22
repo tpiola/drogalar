@@ -1,0 +1,10 @@
+:root {
+  --sl-ink: #101511; --sl-surface: #0b0f0c; --sl-mineral: #f5f2ea;
+  --sl-titanium: #a7a8aa; --sl-energy: #c9ff32; --sl-copper: #d96832;
+  --sl-success: #42c77a; --sl-danger: #e05d5d;
+  --sl-space-1: 4px; --sl-space-2: 8px; --sl-space-3: 12px; --sl-space-4: 16px;
+  --sl-space-6: 24px; --sl-space-8: 32px; --sl-space-12: 48px; --sl-space-16: 64px;
+  --sl-space-24: 96px; --sl-space-32: 128px;
+  --sl-radius-editorial: 2px; --sl-radius-control: 8px; --sl-radius-group: 16px;
+  --sl-motion-micro: 180ms; --sl-motion-component: 300ms; --sl-motion-scene: 700ms;
+}

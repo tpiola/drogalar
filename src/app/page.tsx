@@ -9,7 +9,7 @@ export default function Home() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <header className="topbar">
-      <a className="brand" href="#inicio" aria-label="Sete Lírios — início"><span className="brandMark">SL</span><span>Sete Lírios<small>Farmácia de Manipulação</small></span></a>
+      <a className="brand" href="#inicio" aria-label="Sete Lírios — início"><img className="brandLogo" src="/brand/sete-lirios-logo.svg" alt="Sete Lírios Farmácia de Manipulação" /></a>
       <nav aria-label="Navegação principal"><a href="#objetivos">Por objetivo</a><a href="#produtos">Produtos</a><a href="#como-funciona">Como comprar</a><a href="#contato">Contato</a></nav>
       <a className="button compact" href={quoteUrl} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" />Solicitar orçamento</a>
       <details className="mobileMenu"><summary aria-label="Abrir menu"><Menu /></summary><div><a href="#como-funciona">Como funciona</a><a href="#especialidades">Especialidades</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></div></details>
@@ -24,15 +24,15 @@ export default function Home() {
           <div className="actions"><a className="button" href="#produtos" data-hero-cta="true"><ShoppingBag />Explorar produtos</a><a className="textLink" href={quoteUrl} data-intent="prescription" target="_blank" rel="noreferrer">Enviar receita <ArrowRight /></a></div>
           <p className="microcopy"><ShieldCheck />A dispensação e a manipulação seguem as exigências aplicáveis a cada fórmula.</p>
         </div>
-        <div className="heroVisual" aria-label="Bancada farmacêutica ilustrativa">
-          <div className="impactWord" aria-hidden="true">VITAL</div>
-          <div className="bottle bottleOne"><span>DAILY</span><b>D3 + K2</b><small>60 cápsulas</small></div>
-          <div className="bottle bottleTwo"><span>ACTIVE</span><b>MAGNÉSIO</b><small>60 cápsulas</small></div>
-          <div className="seal"><Check />Conferência<br/>farmacêutica</div>
-        </div>
+        <div className="heroVisual heroPhoto" role="img" aria-label="Linha premium Sete Lírios em embalagens âmbar sobre pedra natural"><div className="seal"><Check />Conferência<br/>farmacêutica</div></div>
       </section>
 
       <section className="trustStrip" aria-label="Diferenciais"><span><Check />Orçamento pelo WhatsApp</span><span><Check />Atendimento em Franca</span><span><Check />Orientação farmacêutica</span></section>
+
+      <section className="brandStory" aria-label="Universo Sete Lírios">
+        <figure className="brandStoryMain"><img src="/images/brand/rotina-preventiva-hd.png" alt="Mulher em uma rotina preventiva segurando uma embalagem Sete Lírios" /><figcaption><span>Rotina preventiva</span><strong>Cuidado que acompanha o seu ritmo.</strong></figcaption></figure>
+        <div><figure><img src="/images/brand/catalogo-hd.png" alt="Embalagens Sete Lírios em composição mineral com lírios" /><figcaption><span>Fórmulas personalizadas</span><strong>Precisão com identidade.</strong></figcaption></figure><figure><img src="/images/brand/laboratorio-hd.png" alt="Farmacêutica conferindo formulações no laboratório Sete Lírios" /><figcaption><span>Confiança farmacêutica</span><strong>Do laboratório à sua rotina.</strong></figcaption></figure></div>
+      </section>
 
       <section id="objetivos" className="section shopSection">
         <div className="shopTitle"><div><p className="eyebrow">Encontre do seu jeito</p><h2>Compre por objetivo.</h2></div><a className="textLink" href="#produtos">Ver vitrine <ArrowRight /></a></div>
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
     </main>
 
-    <footer><a className="brand" href="#inicio"><span className="brandMark">SL</span><span>Sete Lírios<small>Farmácia de Manipulação</small></span></a><p>© {new Date().getFullYear()} Sete Lírios. Conteúdo informativo. · <a href="/privacidade">Privacidade</a></p><a href={quoteUrl} data-intent="footer" target="_blank" rel="noreferrer">WhatsApp: {BUSINESS.whatsappLabel}</a></footer>
+    <footer><a className="brand" href="#inicio"><img className="brandLogo" src="/brand/sete-lirios-logo.svg" alt="Sete Lírios Farmácia de Manipulação" /></a><p>© {new Date().getFullYear()} Sete Lírios. Conteúdo informativo. · <a href="/privacidade">Privacidade</a></p><a href={quoteUrl} data-intent="footer" target="_blank" rel="noreferrer">WhatsApp: {BUSINESS.whatsappLabel}</a></footer>
     <a className="whatsappFab" href={quoteUrl} target="_blank" rel="noreferrer" aria-label="Solicitar orçamento pelo WhatsApp"><MessageCircle /></a>
     <ConversionTracking />
   </>;
