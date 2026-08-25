@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sete-lirios.vercel.app";
+const siteUrl = "https://drogalar.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
