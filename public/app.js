@@ -21,7 +21,7 @@ const OBJ=[
  ['cabelo','Cabelo e unhas','Fios e unhas fortes','#6d5523','#241c0b','leaf','Fios'],
  ['mulher','Saúde da mulher','Cuidado em cada fase','#7a3563','#2a0d22','flower','Ela']
 ];
-const ICO={bolt:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',spark:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',shield:'<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/>',moon:'<path d="M20 14A8 8 0 1 1 10 4a7 7 0 0 0 10 10Z"/>',drop:'<path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12Z"/>',leaf:'<path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15Z"/><path d="M5 19 13 11"/>',bone:'<path d="M7 7a2.5 2.5 0 1 1 3-3l7 7a2.5 2.5 0 1 1 3 3 2.5 2.5 0 1 1-3 3l-7-7a2.5 2.5 0 1 1-3-3Z"/>',flower:'<circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 1 0 7M12 22a4 4 0 0 1 0-7M2 12a4 4 0 0 1 7 0M22 12a4 4 0 0 1-7 0"/>',rx:'<path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h3"/>',flask:'<path d="M10 2v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-10V2"/><path d="M8 2h8"/>',truck:'<path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>',star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9Z"/>',chat:'<path d="M4 5h16v11H8l-4 4z"/>',card:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/>',book:'<path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6"/>'};
+const ICO={scale:'<path d="M12 3v18M5 21h14M6 7h12M6 7l-3 6a3 3 0 0 0 6 0Zm12 0-3 6a3 3 0 0 0 6 0Z"/>',cap:'<rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/><path d="m9.5 6.7 4.6 6.6"/>',tag:'<path d="M3 12V4h8l10 10-8 8Z"/><circle cx="7.5" cy="8.5" r="1.5"/>',home:'<path d="M3 11 12 4l9 7v9H3Z"/><path d="M9 20v-6h6v6"/>',run:'<circle cx="14" cy="4" r="2"/><path d="M7 21l3-6 3 2v4M6 12l3-4 4 1 3 3h3"/>',desk:'<rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8M12 16v4"/>',dumb:'<path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/>',check:'<path d="m5 12 4 4 10-10"/>',bolt:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',spark:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',shield:'<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/>',moon:'<path d="M20 14A8 8 0 1 1 10 4a7 7 0 0 0 10 10Z"/>',drop:'<path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12Z"/>',leaf:'<path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15Z"/><path d="M5 19 13 11"/>',bone:'<path d="M7 7a2.5 2.5 0 1 1 3-3l7 7a2.5 2.5 0 1 1 3 3 2.5 2.5 0 1 1-3 3l-7-7a2.5 2.5 0 1 1-3-3Z"/>',flower:'<circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 1 0 7M12 22a4 4 0 0 1 0-7M2 12a4 4 0 0 1 7 0M22 12a4 4 0 0 1-7 0"/>',rx:'<path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h3"/>',flask:'<path d="M10 2v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-10V2"/><path d="M8 2h8"/>',truck:'<path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>',star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9Z"/>',chat:'<path d="M4 5h16v11H8l-4 4z"/>',card:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/>',book:'<path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6"/>'};
 const ico=(k,cls)=>'<svg class="'+(cls||'')+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+ICO[k]+'</svg>';
 /* fórmulas: sem preço nem promessa; valor e dose definidos no orçamento, conforme a prescrição */
 /* [id, nome, objetivo, forma, apresentação, cor da cápsula, receita obrigatória, descrição educativa] */
@@ -74,7 +74,15 @@ let L={};try{L=JSON.parse(localStorage.getItem('sl_list')||'{}')}catch(e){}
 const saveL=()=>{try{localStorage.setItem('sl_list',JSON.stringify(L))}catch(e){};paintQ()};
 const qcount=()=>Object.values(L).reduce((a,b)=>a+b,0);
 function paintQ(){const n=qcount();document.getElementById('qn').textContent=n;document.getElementById('qn2').textContent=n?'('+n+')':'';paintGoal()}
-function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2200)}
+function toast(t,link){const e=document.getElementById('toast');e.textContent=t;if(link){const a=document.createElement('a');a.href='#orcamento';a.textContent='Ver orçamento';a.onclick=()=>e.classList.remove('on');e.append(a)}e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2200)}
+
+function fly(from){try{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const tgt=[...document.querySelectorAll('#qn,.mbar .a3')].find(x=>x.offsetParent);if(!tgt)return;
+  const bump=()=>{document.querySelectorAll('#qn,.mbar .a3').forEach(b=>{b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump')})};
+  const src=from&&(from.closest('.card,.pd,.quiz')||from).querySelector('svg[role=img]');if(RM||!src||!src.animate){bump();return}
+  const a=src.getBoundingClientRect(),b=tgt.getBoundingClientRect();const c=src.cloneNode(true);c.classList.add('fly');c.removeAttribute('role');c.style.left=a.left+a.width/2-35+'px';c.style.top=a.top+a.height/2-44+'px';document.body.append(c);
+  const dx=b.left+b.width/2-(a.left+a.width/2),dy=b.top+b.height/2-(a.top+a.height/2);
+  c.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${dx*.5}px,${dy*.5-90}px) scale(.7)`,opacity:1,offset:.55},{transform:`translate(${dx}px,${dy}px) scale(.15)`,opacity:.3}],{duration:800,easing:'cubic-bezier(.5,0,.3,1)'}).onfinish=()=>{c.remove();bump()};
+}catch(_){}}
 function card(f){const o=objOf(f[2]);return '<article class="card"><div class="bdg"><span class="o">'+esc(o[1].split(' ')[0])+'</span>'+(f[6]?'<span class="rx">Sob receita</span>':'<span class="f">Fórmula Sete Lírios</span>')+'</div><button class="qa" data-add="'+f[0]+'" aria-label="Adicionar '+esc(f[1])+' ao orçamento">+</button><a class="ph" href="#f-'+f[0]+'" tabindex="-1" aria-hidden="true">'+jar(f)+'</a><div class="bd"><span class="meta">'+esc(f[3])+' · '+esc(f[4])+'</span><h3><a href="#f-'+f[0]+'">'+esc(f[1])+'</a></h3><div class="pr"><b>Valor sob orçamento</b>Pix, cartão ou dinheiro</div><button class="btn dark" data-add="'+f[0]+'">Orçar fórmula</button></div></article>'}
 const rail=items=>'<div class="rail">'+items.map(card).join('')+'</div>';
 
@@ -96,6 +104,8 @@ const POSTS=[
  {s:'como-guardar-manipulados',t:'Como guardar seus manipulados para manter a qualidade',c:'Cuidados',e:'Calor e umidade são os maiores inimigos das fórmulas. Veja onde guardar.',i:'shield',b:[['p','Fórmulas manipuladas têm validade menor que a de produtos industrializados, porque não levam conservantes em excesso. Guardar bem faz diferença.'],['h','Longe do banheiro e da cozinha'],['p','Vapor e calor alteram cápsulas e pós. Prefira um armário seco e arejado, longe do sol.'],['h','Tampa sempre fechada'],['p','O pote foi escolhido para proteger os ativos. Não transfira para porta-comprimidos por muito tempo.'],['h','Geladeira só quando o rótulo pedir'],['p','Algumas fórmulas, principalmente cremes e probióticos, precisam de refrigeração. Siga o que estiver no rótulo.'],['h','Respeite a validade'],['p','Use até a data indicada. Se notar mudança de cor, cheiro ou textura, fale com a farmácia antes de usar.']]}
 ];
 const FAQ=[
+ ['Fórmula manipulada é mais barata que a industrializada?','Depende do ativo e da dose. A vantagem da manipulação é juntar vários ativos em uma única cápsula, na dose da sua prescrição. Mande a receita e compare pelo orçamento.'],
+ ['Posso tomar creatina e outras fórmulas junto?','Muitas combinações são comuns, mas quem define é o profissional que acompanha você. Na conferência, o farmacêutico verifica a receita e tira dúvidas pelo WhatsApp.'],
  ['Preciso de receita para manipular?','Depende do ativo. Vitaminas e suplementos podem ser preparados com orientação farmacêutica; medicamentos e fórmulas com hormônios exigem receita válida. Envie a sua pelo WhatsApp e o farmacêutico confere.'],
  ['Como peço um orçamento?','Monte sua lista no site ou envie a foto da receita pelo WhatsApp (16) 99244-0470. A equipe retorna com valor, prazo e forma de uso.'],
  ['Quanto tempo leva o preparo?','O prazo depende da fórmula e é informado no orçamento. Muitas fórmulas ficam prontas no mesmo dia.'],
@@ -110,7 +120,7 @@ const SLIDES=[
  {k:'Laboratório próprio',t:['Manipulado','<span class="ol">na Av. Brasil,</span>','<em>815.</em>'],p:'Retire na loja ou receba em Franca. Segunda a sábado das 8h às 20h, domingo das 9h às 12h.',a:['Como chegar','route'],b:null,img:'capsulas-real',op:'center 55%',alt:'Farmacêutica encapsulando fórmulas no laboratório da Sete Lírios',bg:'#f4faf3'}
 ];
 const pk=ids=>ids.map(i=>BY[i]||F[0]);
-function heroArt(s){if(!s.art)return '';if(s.art==='steps')return '<div class="hc-art" aria-hidden="true"><span class="big">'+s.w+'</span><div class="steps3">'+[['1','Foto da receita'],['2','Conferência farmacêutica'],['3','Valor e prazo no WhatsApp']].map((x,i)=>'<div style="margin-left:'+(i*22)+'px"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div></div>';const a=pk(s.art);return '<div class="hc-art" aria-hidden="true"><span class="big">'+s.w+'</span><div class="stack"><span class="plinth"></span>'+jar(a[1],'j2')+jar(a[0],'j1')+jar(a[2],'j3')+'</div></div>'}
+function heroArt(s){if(!s.art)return '';if(s.art==='steps')return '<div class="hc-art" aria-hidden="true"><span class="big">'+s.w+'</span><div class="steps3">'+[['1','Foto da receita'],['2','Conferência farmacêutica'],['3','Valor e prazo no WhatsApp']].map((x,i)=>'<div style="margin-left:'+(i*22)+'px"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div></div>';const a=pk(s.art);return '<div class="hc-art" aria-hidden="true">'+caps()+'<span class="big">'+s.w+'</span><div class="stack"><span class="plinth"></span>'+jar(a[1],'j2')+jar(a[0],'j1')+jar(a[2],'j3')+'</div></div>'}
 function heroCar(){
   const b=(x,cls)=>{if(!x)return '';const ar=cls?'':'<span class="ar" aria-hidden="true">→</span>';
     if(x[1]==='wa')return '<a class="btn '+cls+' js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="#">'+x[0]+ar+'</a>';
@@ -142,13 +152,33 @@ const banners=()=>`<section class="band" style="padding-top:8px"><div class="wra
  <a class="bn js-route" href="#" style="--op:center 35%"><img src="/img/fachada-real-480.webp" srcset="/img/fachada-real-480.webp 520w, /img/fachada-real.webp 1000w" sizes="(min-width:820px) 700px, 92vw" alt="" width="1000" height="1421" loading="lazy" decoding="async"><b>Av. Brasil, <i>815</i></b><span>Manipulação, homeopatia e drogaria no mesmo endereço, na Vila Aparecida.</span><u>Como chegar →</u></a>
  <a class="bn tall" id="homeopatia" href="#drogaria"><img src="/img/loja-real-480.webp" srcset="/img/loja-real-480.webp 520w, /img/loja-real.webp 1000w" sizes="(min-width:820px) 560px, 92vw" alt="" width="1000" height="959" loading="lazy" decoding="async"><b>Homeopatia <i>e drogaria</i></b><span>Medicamentos homeopáticos, drogaria, higiene e bebê no mesmo endereço da manipulação.</span><u>Ver a loja →</u></a>
 </div></div></section>`;
+
+const caps=()=>'<div class="caps" aria-hidden="true">'+[[8,18,30,'#0a841c',6,14,-20],[38,8,22,'#c9a24c',8,-12,18],[60,80,28,'#0a841c',7,18,-16],[88,24,20,'#c9a24c',9,-14,-24],[72,48,18,'#5bb86a',6.5,10,20]].map(c=>'<i style="left:'+c[0]+'%;top:'+c[1]+'%;--s:'+c[2]+'px;--c1:'+c[3]+';--d:'+c[4]+'s;--x:'+c[5]+'px;--y:'+c[6]+'px;--r:'+(c[0]*3)+'deg"></i>').join('')+'</div>';
+const QS=[['check','Conferência farmacêutica em toda fórmula'],['scale','Pesagem individual dos ativos'],['tag','Rótulo com lote e validade'],['flask','Laboratório próprio em Franca'],['chat','Orçamento pelo WhatsApp'],['truck','Retire na loja ou receba em casa']];
+const qstrip=()=>{const one=QS.map(q=>'<span>'+ico(q[0])+q[1]+'</span>').join('');return '<div class="qstrip" aria-hidden="true"><div class="row">'+one+one+'</div></div>'};
+const PROC=[['rx','Receita conferida','O farmacêutico confere ativos, doses e interações.'],['scale','Pesagem','Cada ativo é pesado para a sua fórmula, uma a uma.'],['cap','Manipulação','Encapsulação ou preparo na forma escolhida.'],['tag','Rotulagem','Rótulo com seu nome, lote, validade e modo de uso.'],['truck','Pronto para você','Retire na Av. Brasil, 815 ou receba em Franca.']];
+const procSection=()=>`<section class="band" style="padding-top:6px"><div class="wrap">${shead('Como sua fórmula é <em>feita</em>','','','Do laboratório para você')}<div class="procw rv"><figure class="ph2"><img src="/img/capsulas-real-480.webp" srcset="/img/capsulas-real-480.webp 520w, /img/capsulas-real.webp 1000w" sizes="(min-width:1100px) 300px, 1px" alt="Encapsulação de fórmula no laboratório da Sete Lírios" width="1000" height="1774" loading="lazy" decoding="async"></figure><div class="proc rv">${PROC.map((s,i)=>'<div class="pstep" style="--i:'+i+'"><i>'+ico(s[0])+'</i><b>'+s[1]+'</b><span>'+s[2]+'</span></div>').join('')}</div></div></div></section>`;
+/* quiz: encontra fórmulas por objetivo e rotina; o farmacêutico confirma */
+const QZ={o:null,r:null,s:0};
+const RT=[['dumb','Musculação ou treino de força'],['run','Corrida, bike ou endurance'],['desk','Rotina corrida, pouco treino'],['home','Quero mais qualidade de vida']];
+function quizBody(){
+  if(QZ.s===0)return '<div class="qs"><h3>1. Qual é o seu objetivo agora?</h3><div class="qopts">'+OBJ.map(o=>'<button class="qopt" data-qo="'+o[0]+'"><i>'+ico(o[5])+'</i>'+o[1]+'</button>').join('')+'</div></div>';
+  if(QZ.s===1)return '<div class="qs"><h3>2. Como é a sua rotina?</h3><div class="qopts">'+RT.map((r,i)=>'<button class="qopt" data-qr="'+i+'"><i>'+ico(r[0])+'</i>'+r[1]+'</button>').join('')+'</div><button class="qback" data-qb>← Voltar</button></div>';
+  const o=objOf(QZ.o),its=F.filter(f=>f[2]===QZ.o).slice(0,3);while(its.length<3){const x=F.find(f=>!its.includes(f)&&(f[2]==='imunidade'||f[2]==='sono'));if(!x)break;its.push(x)}
+  const msg='Olá! Fiz o teste no site. Objetivo: '+o[1]+'. Rotina: '+RT[QZ.r][1]+'. Quero a orientação do farmacêutico sobre: '+its.map(f=>f[1]).join(', ')+'.';
+  return '<div class="qs"><span class="kick">Seu ponto de partida</span><h3 style="margin-top:8px">'+esc(o[1])+' · '+esc(RT[QZ.r][1])+'</h3><p style="color:var(--mut);margin-bottom:12px">Fórmulas que o farmacêutico costuma avaliar para esse objetivo. A escolha final e a dose dependem de você, da sua rotina e da prescrição.</p><div class="qres">'+its.map(f=>'<a href="#f-'+f[0]+'">'+jar(f)+esc(f[1])+'</a>').join('')+'</div><div class="hc-cta"><button class="btn" data-qadd="'+its.map(f=>f[0]).join(',')+'">Adicionar ao orçamento<span class="ar" aria-hidden="true">→</span></button><a class="btn wa" href="'+wa(msg)+'" target="_blank" rel="noopener">Falar com o farmacêutico</a></div><button class="qback" data-qr0>↺ Refazer o teste</button></div>';
+}
+const quizSection=()=>`<section class="band" id="quiz" style="padding-top:6px"><div class="wrap"><div class="quiz rv"><div class="qa1"><svg class="lily" aria-hidden="true" viewBox="42 7 116 124"><use href="#sl-lily"/></svg><span class="kick">Teste rápido · 30 segundos</span><h2>Qual fórmula combina com a sua rotina?</h2><p>Responda duas perguntas e veja por onde começar. Depois, o farmacêutico confere tudo com você pelo WhatsApp.</p><div class="qbar" id="qbar"><i class="on"></i><i></i><i></i></div></div><div class="qb" id="qb" aria-live="polite">${quizBody()}</div></div></div></section>`;
+function paintQuiz(){const b=document.getElementById('qb');if(!b)return;b.innerHTML=quizBody();document.querySelectorAll('#qbar i').forEach((x,i)=>x.classList.toggle('on',i<=QZ.s))}
 function home(){
-  return heroCar()+trust()+
+  return heroCar()+trust()+qstrip()+
   `<section class="band" id="objetivos"><div class="wrap">${shead('Os melhores manipulados para <em>seus objetivos</em>','','','Farmácia de manipulação')}${circs()}${live()}</div></section>
   <section class="band" style="padding-top:6px"><div class="wrap rv">${shead('Manipulados mais buscados','#formulas')}${rail(pk(TOP))}<p class="note" style="text-align:center">Imagens ilustrativas. Ativos, doses e forma farmacêutica são definidos na prescrição ou com o farmacêutico; o valor é informado no orçamento.</p></div></section>
   <section class="band" style="padding-top:6px"><div class="wrap">${shead('Compre por objetivo','','','Treino · Energia · Imunidade · Sono')}${otiles()}</div></section>
   <section class="band" style="padding-top:6px"><div class="wrap rv">${shead('Manipulados para <em>performance</em>','#o-performance')}${rail(F.filter(f=>f[2]==='performance'||f[2]==='energia'))}</div></section>
   ${rxSection()}
+  ${procSection()}
+  ${quizSection()}
   <section class="band" style="padding-top:6px"><div class="wrap rv">${shead('Imunidade, sono e <em>recuperação</em>','#o-imunidade')}${rail(F.filter(f=>['imunidade','sono','articulacoes'].includes(f[2])))}</div></section>
   ${banners()}
   <section class="band" style="padding-top:6px" id="drogaria"><div class="wrap rv">${shead('Pele, cabelo e <em>saúde da mulher</em>','#o-pele')}${rail(F.filter(f=>['pele','cabelo','mulher'].includes(f[2])))}</div></section>
@@ -163,13 +193,23 @@ function listing(o,q){
   if(q){const k=q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');items=F.filter(f=>(f[1]+' '+objOf(f[2])[1]+' '+f[7]).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').includes(k));t='Busca: '+q;d=items.length+' resultado(s).'}
   return `<section class="band"><div class="wrap"><div class="crumbs"><a href="#inicio">Início</a> / ${esc(t)}</div><h1 style="font-size:clamp(38px,4.6vw,58px)">${esc(t)}</h1><p style="color:var(--mut);margin:10px 0 24px">${esc(d)}</p>${items.length?'<div class="grid">'+items.map(card).join('')+'</div>':'<p>Não encontrou? <a class="js-wa" style="color:var(--g)" data-m="Olá! Vim pelo site e procuro: '+esc(q||'')+'" href="#">Pergunte no WhatsApp</a>: manipulamos muitas outras fórmulas.</p>'}<p class="note">Imagens ilustrativas. Valor, dose e forma farmacêutica definidos no orçamento, conforme a prescrição.</p></div></section>`+(o?rxSection():'');
 }
+
+function tabsFor(f){const o=objOf(f[2]);
+  const T=[['Sobre',`<p>${esc(f[7])}</p><p style="margin-top:10px"><b>Objetivo:</b> ${esc(o[1])} · <b>Forma:</b> ${esc(f[3])} · <b>Apresentação:</b> ${esc(f[4])}</p>`],
+   ['Como é feito','<ul><li>O farmacêutico confere a receita ou a orientação antes do preparo.</li><li>Os ativos são pesados individualmente para a sua fórmula.</li><li>Preparo na forma escolhida: '+esc(f[3].toLowerCase())+'.</li><li>Rótulo com seu nome, lote, validade e modo de uso.</li></ul>'],
+   ['Cuidados','<ul><li>Use na dose e no horário indicados pelo profissional que acompanha você.</li><li>Gestantes, lactantes, pessoas com doenças crônicas ou que usam outros medicamentos devem falar com o médico antes.</li><li>Em caso de reação, suspenda o uso e procure orientação.</li><li>Este produto não substitui uma alimentação equilibrada.</li></ul>'],
+   ['Conservação','<ul><li>Guarde em local seco, longe do calor e da luz, com a tampa bem fechada.</li><li>Não guarde no banheiro nem dentro do carro.</li><li>Mantenha fora do alcance de crianças.</li><li>Respeite a validade impressa no rótulo.</li></ul>']];
+  return '<div class="tabs2"><div role="tablist" aria-label="Informações da fórmula">'+T.map((x,i)=>'<button role="tab" id="tb'+i+'" aria-controls="tp'+i+'" aria-selected="'+(i?'false':'true')+'" tabindex="'+(i?-1:0)+'">'+x[0]+'</button>').join('')+'</div>'+T.map((x,i)=>'<div role="tabpanel" id="tp'+i+'" aria-labelledby="tb'+i+'"'+(i?' hidden':'')+'>'+x[1]+'</div>').join('')+'</div>';
+}
+const guar=()=>'<div class="guar"><div><i>'+ico('check')+'</i>Conferência farmacêutica</div><div><i>'+ico('tag')+'</i>Lote e validade no rótulo</div><div><i>'+ico('chat')+'</i>Dúvidas pelo WhatsApp</div></div>';
 function product(f){const o=objOf(f[2]);
   const rel=F.filter(x=>x[2]===f[2]&&x[0]!==f[0]).slice(0,2);while(rel.length<2)rel.push(F.find(x=>x[0]!==f[0]&&!rel.includes(x)));
   const trio=[f].concat(rel);
   return `<section class="band"><div class="wrap"><div class="crumbs"><a href="#inicio">Início</a> / <a href="#o-${o[0]}">${esc(o[1])}</a> / ${esc(f[1])}</div><div class="pd"><div class="gal"><small>Imagem meramente ilustrativa · Manipulação individualizada</small>${jar(f)}<div class="stripe">Fórmula <b>Sete Lírios</b></div></div><div><span class="kick">${esc(o[1])}</span><h1>${esc(f[1])}</h1><p class="sub">${esc(f[3])} · ${esc(f[4])}</p><p style="margin:16px 0 0;font-size:18px;color:#2c4733">${esc(f[7])}</p>${f[6]?'<div class="alert rx"><b>Exige receita.</b> Esta fórmula só é preparada mediante prescrição válida, conferida pelo farmacêutico.</div>':'<div class="alert">A dose e a forma de uso são definidas pelo profissional que acompanha você ou com o farmacêutico. Valor informado no orçamento.</div>'}
   <div class="combo"><h3>Complemente o seu cuidado</h3><div class="cb">${trio.map((x,i)=>'<label><input type="checkbox" name="trio" value="'+x[0]+'" checked aria-label="Incluir '+esc(x[1])+'">'+jar(x)+'<span>'+(i?'':'<b>Este item: </b>')+esc(x[1])+'</span></label>').join('')}</div><div class="hc-cta" style="margin-top:14px;justify-content:space-between;align-items:center"><span style="color:var(--mut);font-size:15px">Valor de cada item informado no orçamento</span><button class="btn dark" data-addtrio>Adicionar ao orçamento</button></div></div>
   <div class="qsel" role="radiogroup" aria-label="Quantidade de potes"><label><input type="radio" name="qp" value="1" checked><span>1 pote<small>Para começar</small></span></label><label><input type="radio" name="qp" value="2"><span>2 potes<small>Uso contínuo</small></span></label><label><input type="radio" name="qp" value="3"><span>3 potes<small>Tratamento longo</small></span></label></div>
-  <div class="hc-cta" style="margin-top:18px"><button class="btn" data-add="${f[0]}" data-qsel>Adicionar ao orçamento<span class="ar" aria-hidden="true">→</span></button><a class="btn wa js-wa" data-m="Olá! Vim pelo site e quero orçamento de: ${esc(f[1])}." href="#">Orçar no WhatsApp</a></div></div></div></div></section>
+  <div class="hc-cta" style="margin-top:18px"><button class="btn" data-add="${f[0]}" data-qsel>Adicionar ao orçamento<span class="ar" aria-hidden="true">→</span></button><a class="btn wa js-wa" data-m="Olá! Vim pelo site e quero orçamento de: ${esc(f[1])}." href="#">Orçar no WhatsApp</a></div>${guar()}</div></div>${tabsFor(f)}</div></section>
+  <div class="pbar"><button class="btn" data-add="${f[0]}" data-qsel>Adicionar ao orçamento</button><a class="btn wa js-wa" data-m="Olá! Vim pelo site e quero orçamento de: ${esc(f[1])}." href="#" aria-label="Orçar ${esc(f[1])} no WhatsApp">WhatsApp</a></div>
   <section class="band" style="padding-top:0"><div class="wrap">${shead('Mais em '+esc(o[1]))}${rail(F.filter(x=>x[2]===f[2]&&x[0]!==f[0]).concat(F.filter(x=>x[2]!==f[2]).slice(0,4)))}</div></section>`;
 }
 function blogList(){return `<section class="band"><div class="wrap"><div class="crumbs"><a href="#inicio">Início</a> / Blog</div><h1 style="font-size:clamp(28px,4vw,40px);margin-bottom:20px">Blog Sete Lírios</h1><div class="posts">${POSTS.map(postCard).join('')}</div></div></section>`}
@@ -205,7 +245,7 @@ const PAGES={
 const chev='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>';
 function navCats(cur){
   const mm=o=>{const its=F.filter(f=>f[2]===o[0]);return '<div class="mm"><div class="in"><div><h3>'+esc(o[1])+'</h3><ul><li><a class="all" href="#o-'+o[0]+'">Ver todos</a></li>'+its.map(f=>'<li><a href="#f-'+f[0]+'">'+esc(f[1])+'</a></li>').join('')+'</ul></div><div><h3>Mais buscados</h3><ul>'+TOP.slice(0,6).map(i=>'<li><a href="#f-'+i+'">'+esc(BY[i][1])+'</a></li>').join('')+'</ul></div><a class="promo js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="#"><svg aria-hidden="true" viewBox="42 7 116 124"><use href="#sl-lily"/></svg><b>Tem receita?<br><i>Manda no zap.</i></b><span>O farmacêutico confere e responde com valor e prazo.</span></a></div></div>'};
-  document.getElementById('catnav').innerHTML=OBJ.slice(0,7).map(o=>'<li><a href="#o-'+o[0]+'"'+(cur===o[0]?' class="on"':'')+'>'+o[1].replace(' e recuperação','').replace(' e ossos','')+chev+'</a>'+mm(o)+'</li>').join('')+'<li><a href="#formulas"'+(cur==='all'?' class="on"':'')+'>Todas</a></li><li><a href="#blog"'+(cur==='blog'?' class="on"':'')+'>Blog</a></li><li><a class="hl" href="#receita">Manipule sua receita</a></li>';
+  document.getElementById('catnav').innerHTML=OBJ.slice(0,7).map(o=>'<li><a href="#o-'+o[0]+'"'+(cur===o[0]?' class="on"':'')+'>'+o[1].replace(' e recuperação','').replace(' e ossos','')+chev+'</a>'+mm(o)+'</li>').join('')+'<li><a href="#quiz">Teste rápido</a></li><li><a href="#formulas"'+(cur==='all'?' class="on"':'')+'>Todas</a></li><li><a href="#blog"'+(cur==='blog'?' class="on"':'')+'>Blog</a></li><li><a class="hl" href="#receita">Manipule sua receita</a></li>';
 }
 let S={q:''};
 function anim(){V.querySelectorAll('.card,.circ,.post').forEach((c,i)=>c.style.setProperty('--i',Math.min(i,10)));V.classList.remove('vin');void V.offsetWidth;V.classList.add('vin');const rb=document.getElementById('rbar');rb.classList.remove('go');void rb.offsetWidth;rb.classList.add('go')}
@@ -222,7 +262,7 @@ function route(){
   else if(h==='orcamento'){html=quote()}
   else if(PAGES[h]){html=PAGES[h]()}
   else{html=home();ld={'@context':'https://schema.org','@type':'FAQPage',mainEntity:FAQ.map(f=>({'@type':'Question',name:f[0],acceptedAnswer:{'@type':'Answer',text:f[1]}}))};
-    if(['objetivos','receita','duvidas','homeopatia','drogaria'].includes(h)){const pre=V.dataset.pre==='inicio';if(pre)V.removeAttribute('data-pre');else if(!V.querySelector('.hcar'))V.innerHTML=html;navCats('');after();if(!pre)anim();const el=document.getElementById(h);if(el)el.scrollIntoView();return}}
+    if(['objetivos','receita','duvidas','homeopatia','drogaria','quiz'].includes(h)){const pre=V.dataset.pre==='inicio';if(pre)V.removeAttribute('data-pre');else if(!V.querySelector('.hcar'))V.innerHTML=html;navCats('');after();if(!pre)anim();const el=document.getElementById(h);if(el)el.scrollIntoView();return}}
   const pre=V.dataset.pre===h;if(pre){V.removeAttribute('data-pre')}else{V.innerHTML=html}
   navCats(cur);after();if(!pre){anim();window.scrollTo(0,0)}
   const old=document.getElementById('ldv');if(old)old.remove();
@@ -237,7 +277,7 @@ function initHero(){
   const set=i=>{cur=i;Sl.forEach((s,k)=>s.classList.toggle('on',k===i));D.forEach((d,k)=>{d.classList.toggle('on',k===i);d.setAttribute('aria-selected',k===i);if(k===i){d.style.animation='none';void d.offsetWidth;d.style.animation=''}})};
   const go=i=>{i=(i+Sl.length)%Sl.length;T.scrollTo({left:Sl[i].offsetLeft-T.offsetLeft,behavior:RM?'auto':'smooth'})};
   const arm=()=>{clearTimeout(tm);if(RM||paused)return;tm=setTimeout(()=>go(cur+1),DUR)};
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.6){set(Sl.indexOf(e.target));arm()}}),{root:T,threshold:[.6]});
+  C.classList.remove('pz');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.6){set(Sl.indexOf(e.target));arm()}}),{root:T,threshold:[.6]});
   Sl.forEach(s=>io.observe(s));
   C.querySelector('.prev').onclick=()=>go(cur-1);C.querySelector('.next').onclick=()=>go(cur+1);D.forEach((d,i)=>d.onclick=()=>go(i));
   const pause=v=>{paused=v;C.classList.toggle('paused',v);v?clearTimeout(tm):arm()};
@@ -248,10 +288,11 @@ function initHero(){
   if(RM)C.classList.add('paused');arm();
 }
 function initRails(){V.querySelectorAll('.rail,.circs').forEach(r=>{const w=r.parentElement.classList.contains('railw')?r.parentElement:null;let box=w;if(!box){box=document.createElement('div');box.className='railw';r.before(box);box.append(r)}if(box.querySelector('.rnav'))return;const p=document.createElement('button'),n=document.createElement('button');p.className='rnav p';n.className='rnav n';p.textContent='‹';n.textContent='›';p.setAttribute('aria-label','Anteriores');n.setAttribute('aria-label','Próximos');box.append(p,n);const st=()=>{p.disabled=r.scrollLeft<8;n.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-8};p.onclick=()=>r.scrollBy({left:-r.clientWidth*.9});n.onclick=()=>r.scrollBy({left:r.clientWidth*.9});r.addEventListener('scroll',st,{passive:true});st()})}
-function initReveal(){const els=V.querySelectorAll('.rv:not(.in)');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+function initReveal(){V.querySelectorAll('.rv').forEach(r=>r.querySelectorAll('.card,.post,.ot,.step,.pstep').forEach((c,i)=>c.style.setProperty('--i',Math.min(i,7))));V.querySelectorAll('.circs .circ').forEach((c,i)=>c.style.setProperty('--i',i));const els=V.querySelectorAll('.rv:not(.in),.shead:not(.in),.circs:not(.in)');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>{const r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add('in');else io.observe(e)})}
 function paintGoal(){const n=qcount(),g=document.getElementById('goal');if(!g)return;g.innerHTML='<span>'+(n?'Sua lista: <b>'+n+' fórmula'+(n>1?'s':'')+'</b> · enviar orçamento':'Monte sua lista e receba o <b>orçamento no WhatsApp</b>')+'</span><span class="bars">'+[1,2,3].map(i=>'<i'+(n>=i?' class="on"':'')+'></i>').join('')+'</span>'}
 function after(){
+  document.body.classList.toggle('haspbar',!!V.querySelector('.pbar'));
   initHero();initRails();initReveal();tick();
   document.querySelectorAll('.js-wa').forEach(a=>{a.href=wa(a.dataset.m||'Olá! Vim pelo site.');a.target='_blank';a.rel='noopener'});
   document.querySelectorAll('.js-route').forEach(a=>{a.href='https://www.google.com/maps/dir/?api=1&destination='+GEO;a.target='_blank';a.rel='noopener'});
@@ -266,10 +307,36 @@ function after(){
       window.open(wa(msg),'_blank','noopener');toast('Orçamento enviado para o WhatsApp');L={};saveL();setTimeout(route,300)}}
 }
 document.addEventListener('click',e=>{
-  const t3=e.target.closest('[data-addtrio]');if(t3){const ch=[...V.querySelectorAll('input[name=trio]:checked')].map(x=>x.value);if(!ch.length){toast('Marque ao menos uma fórmula');return}ch.forEach(id=>L[id]=(L[id]||0)+1);saveL();toast(ch.length+' fórmula'+(ch.length>1?'s':'')+' no orçamento');return}
-  const a=e.target.closest('[data-add]');if(a){const id=a.dataset.add;const qs=a.hasAttribute('data-qsel')?V.querySelector('input[name=qp]:checked'):null;const n=qs?+qs.value:1;L[id]=(L[id]||0)+n;saveL();toast((n>1?n+'× ':'')+BY[id][1]+' no orçamento');return}
+  const qo=e.target.closest('[data-qo]');if(qo){QZ.o=qo.dataset.qo;QZ.s=1;paintQuiz();return}
+  const qr=e.target.closest('[data-qr]');if(qr){QZ.r=+qr.dataset.qr;QZ.s=2;paintQuiz();return}
+  if(e.target.closest('[data-qb]')){QZ.s=0;paintQuiz();return}
+  if(e.target.closest('[data-qr0]')){QZ.s=0;QZ.o=QZ.r=null;paintQuiz();return}
+  const qa=e.target.closest('[data-qadd]');if(qa){qa.dataset.qadd.split(',').forEach(id=>L[id]=(L[id]||0)+1);saveL();fly(qa);toast('Fórmulas do teste no orçamento',1);return}
+  const tb=e.target.closest('[role=tab]');if(tb){selTab(tb);return}
+  const t3=e.target.closest('[data-addtrio]');if(t3){const ch=[...V.querySelectorAll('input[name=trio]:checked')].map(x=>x.value);if(!ch.length){toast('Marque ao menos uma fórmula');return}ch.forEach(id=>L[id]=(L[id]||0)+1);saveL();fly(t3);toast(ch.length+' fórmula'+(ch.length>1?'s':'')+' no orçamento',1);return}
+  const a=e.target.closest('[data-add]');if(a){const id=a.dataset.add;const qs=a.hasAttribute('data-qsel')?V.querySelector('input[name=qp]:checked'):null;const n=qs?+qs.value:1;L[id]=(L[id]||0)+n;saveL();fly(a);toast((n>1?n+'× ':'')+BY[id][1]+' no orçamento',1);return}
   const q=e.target.closest('[data-q]');if(q){const id=q.dataset.q;L[id]=Math.max(0,(L[id]||0)+(+q.dataset.d));if(!L[id])delete L[id];saveL();route();return}
 });
+
+function selTab(tb){const box=tb.closest('.tabs2');box.querySelectorAll('[role=tab]').forEach(x=>{const on=x===tb;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;box.querySelector('#'+x.getAttribute('aria-controls')).hidden=!on})}
+document.addEventListener('keydown',e=>{const tb=e.target.closest&&e.target.closest('[role=tab]');if(!tb||!['ArrowRight','ArrowLeft'].includes(e.key))return;const all=[...tb.parentElement.children];const n=all[(all.indexOf(tb)+(e.key==='ArrowRight'?1:-1)+all.length)%all.length];selTab(n);n.focus();e.preventDefault()});
+/* sugestões de busca */
+(()=>{const inp=document.getElementById('sInput'),box=document.getElementById('sugg');let act=-1;
+  const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const close=()=>{box.classList.remove('on');inp.setAttribute('aria-expanded','false');act=-1};
+  const paint=()=>{const q=norm(inp.value.trim());if(q.length<2){close();return}
+    const its=F.filter(f=>norm(f[1]+' '+objOf(f[2])[1]+' '+f[7]).includes(q)).slice(0,6);
+    box.innerHTML=(its.length?its.map((f,i)=>'<a role="option" id="sg'+i+'" href="#f-'+f[0]+'">'+jar(f)+'<span>'+esc(f[1])+'<small>'+esc(f[3])+'</small></span><em>'+esc(objOf(f[2])[1].split(' ')[0])+'</em></a>').join('')+'<a class="all" href="#busca">Ver todos os resultados</a>':'<div class="none">Nada encontrado. <a class="js-wa" href="'+wa('Olá! Procuro: '+inp.value)+'" target="_blank" rel="noopener" style="color:var(--g2);font-weight:700">Pergunte no WhatsApp</a></div>');
+    box.classList.add('on');inp.setAttribute('aria-expanded','true');act=-1};
+  inp.addEventListener('input',paint);inp.addEventListener('focus',paint);
+  inp.addEventListener('keydown',e=>{const it=[...box.querySelectorAll('a[role=option]')];if(e.key==='Escape'){close();return}
+    if(!it.length||!['ArrowDown','ArrowUp'].includes(e.key))return;e.preventDefault();act=(act+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((x,i)=>x.classList.toggle('act',i===act));inp.setAttribute('aria-activedescendant','sg'+act)});
+  document.getElementById('sForm').addEventListener('submit',e=>{const it=box.querySelectorAll('a[role=option]');if(act>=0&&it[act]){e.stopImmediatePropagation();location.hash=it[act].getAttribute('href').slice(1)}close()},true);
+  box.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;if(a.classList.contains('all')){e.preventDefault();S.q=inp.value.trim();if(location.hash==='#busca')route();else location.hash='busca'}close()});
+  document.addEventListener('click',e=>{if(!e.target.closest('.search'))close()});
+})();
+/* cabeçalho compacto e voltar ao topo */
+(()=>{const hd=document.querySelector('header'),tt=document.getElementById('totop');let tk=0;addEventListener('scroll',()=>{if(tk)return;tk=requestAnimationFrame(()=>{tk=0;const y=scrollY;hd.classList.toggle('sc',y>40);tt.classList.toggle('on',y>900)})},{passive:true});tt.onclick=()=>scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})})();
 document.getElementById('sForm').onsubmit=e=>{e.preventDefault();S.q=document.getElementById('sInput').value.trim();if(!S.q)return;if(location.hash==='#busca')route();else location.hash='busca'};
 document.getElementById('payi').innerHTML=['pix','credito','debito','dinheiro'].map(payTile).join('');
 document.getElementById('legal').innerHTML='<span>'+esc([LEGAL.fantasia,LEGAL.razao,LEGAL.cnpj&&'CNPJ '+LEGAL.cnpj,LEGAL.end,LEGAL.rt&&'Farmacêutico responsável: '+LEGAL.rt+(LEGAL.crf?' · CRF-SP '+LEGAL.crf:''),LEGAL.afe&&'AFE '+LEGAL.afe].filter(Boolean).join(' · '))+'</span><span>As informações deste site não substituem consulta, diagnóstico ou prescrição de profissional habilitado. Não se automedique. Imagens ilustrativas.</span><span><a href="#privacidade">Privacidade</a> · <a href="#termos">Termos</a> · <a href="#info-farmaceutica">Informações farmacêuticas</a></span>';

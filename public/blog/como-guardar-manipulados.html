@@ -18,7 +18,7 @@
 <meta property="og:title" content="Como guardar seus manipulados para manter a qualidade | Sete Lírios Manipulação">
 <meta property="og:description" content="Calor e umidade são os maiores inimigos das fórmulas. Veja onde guardar.">
 <meta property="og:url" content="https://drogalar.vercel.app/blog/como-guardar-manipulados">
-<meta property="og:image" content="https://drogalar.vercel.app/img/potes-real.webp">
+<meta property="og:image" content="https://drogalar.vercel.app/img/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Sete Lírios Manipulação, farmácia de manipulação em Franca/SP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="BR-SP"><meta name="geo.placename" content="Franca"><meta name="geo.position" content="-20.5265417;-47.3840619"><meta name="ICBM" content="-20.5265417, -47.3840619">
 <link rel="preload" href="/fonts/barlow-condensed-latin-900-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -440,7 +440,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--g)}
 @media (prefers-reduced-motion:reduce){.tick .row{animation:none}*{scroll-behavior:auto!important}}
 
 /* responsivo */
-@media (max-width:1240px){.rail{grid-auto-columns:calc((100% - 48px)/4)}.hl2.h2x{display:none}.fcols{grid-template-columns:1fr 1fr 1fr}.fcols>div:first-child{grid-column:1/-1;max-width:420px}.circs{grid-template-columns:repeat(8,minmax(110px,1fr))}}
+@media (max-width:1240px){#catnav>li>a{padding:14px 8px;font-size:15px;letter-spacing:.4px}#catnav{gap:0}.rail{grid-auto-columns:calc((100% - 48px)/4)}.hl2.h2x{display:none}.fcols{grid-template-columns:1fr 1fr 1fr}.fcols>div:first-child{grid-column:1/-1;max-width:420px}.circs{grid-template-columns:repeat(8,minmax(110px,1fr))}}
 @media (max-width:1100px){
 #catnav{overflow-x:auto;scrollbar-width:none;padding:0 12px;scroll-padding-inline:12px}
 #catnav::-webkit-scrollbar{display:none}
@@ -500,6 +500,140 @@ body{font-size:16.5px}
 .li{grid-template-columns:70px 1fr}.li .qty{grid-column:2}
 .faq{padding:4px 18px}
 }
+
+/* ===== v5: nível profissional + animações ===== */
+.ico-sm{width:22px;height:22px}
+header{transition:box-shadow .3s}
+header .hrow{transition:padding .3s var(--ease)}
+header.sc{box-shadow:0 10px 30px -18px #0d5a1759}
+header.sc .hrow{padding-top:6px;padding-bottom:6px}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,#ffffff40 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn:hover:after{transform:translateX(120%)}
+/* busca com sugestões */
+.search{position:relative}
+.sugg{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:60;background:#fff;border-radius:18px;box-shadow:0 24px 50px -20px #0d5a1766,0 0 0 1px var(--line);padding:8px;display:none}
+.sugg.on{display:block;animation:pop .22s var(--ease)}
+.sugg a{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:8px 10px;border-radius:12px;text-decoration:none;color:var(--ink)}
+.sugg a:hover,.sugg a.act{background:var(--bg)}
+.sugg a svg{width:40px;height:40px}
+.sugg small{display:block;color:var(--mut);font-size:13px}
+.sugg em{font-style:normal;font:800 13px/1 var(--fd);letter-spacing:.6px;text-transform:uppercase;color:var(--g2)}
+.sugg .all{display:block;text-align:center;padding:10px;font-weight:700;color:var(--g2);grid-template-columns:none}
+.sugg .none{padding:12px 14px;color:var(--mut);font-size:15px}
+@keyframes pop{from{opacity:0;transform:translateY(-6px) scale(.98)}to{opacity:1;transform:none}}
+/* hero: Ken Burns, cápsulas flutuando e progresso do autoplay */
+.hc-dots button.on:after{content:"";position:absolute;left:5px;top:50%;height:4px;margin-top:-2px;width:32px;border-radius:4px;background:var(--gd);transform-origin:0 50%;transform:scaleX(0);animation:prog var(--hcd,6000ms) linear forwards}
+.hcar:hover .hc-dots button.on:after,.hcar.pz .hc-dots button.on:after{animation-play-state:paused}
+@keyframes prog{to{transform:scaleX(1)}}
+.caps{position:absolute;inset:0;pointer-events:none;z-index:1}
+.caps i{position:absolute;width:var(--s,26px);height:calc(var(--s,26px)*.42);border-radius:99px;background:linear-gradient(90deg,var(--c1,#0a841c) 50%,#fff 50%);box-shadow:0 8px 16px -8px #0d5a1766,inset 0 0 0 1px #0000000f;opacity:.9;transform:rotate(var(--r,20deg))}
+@media (prefers-reduced-motion:no-preference){
+.hc-slide.on .photo img{animation:kb 9s ease-out both}
+.caps i{animation:drift var(--d,7s) ease-in-out infinite alternate}
+.hc-slide.on .hc-art .big{animation:bigin 1.2s var(--ease) both}
+}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+@keyframes drift{from{translate:0 0}to{translate:var(--x,10px) var(--y,-22px);rotate:25deg}}
+@keyframes bigin{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+/* faixa de qualidade */
+.qstrip{margin-top:30px;overflow:hidden;border-block:1px solid var(--line);background:#fff}
+.qstrip .row{display:flex;width:max-content;animation:mq 46s linear infinite}
+.qstrip span{display:flex;align-items:center;gap:10px;padding:16px 26px;font:800 17px/1 var(--fd);letter-spacing:1px;text-transform:uppercase;color:var(--gd);white-space:nowrap}
+.qstrip span svg{width:20px;height:20px;color:var(--g)}
+.qstrip:hover .row{animation-play-state:paused}
+/* revelação em cascata */
+@media (prefers-reduced-motion:no-preference){
+.js .rv .card,.js .rv .post,.js .rv .ot,.js .rv .step,.js .rv .pstep,.js .circs .circ{opacity:0;transform:translateY(26px);transition:opacity .6s var(--ease),transform .6s var(--ease),box-shadow .25s;transition-delay:calc(var(--i,0)*70ms)}
+.js .rv.in .card,.js .rv.in .post,.js .rv.in .ot,.js .rv.in .step,.js .rv.in .pstep,.js .circs.in .circ{opacity:1;transform:none}
+.js .rv.in .card:hover,.js .rv.in .ot:hover{transform:translateY(-5px)}
+.js .shead h2:after{transform:scaleX(0);transition:transform .9s var(--ease) .15s}
+.js .shead.in h2:after{transform:scaleX(1)}
+}
+/* cards: brilho e inclinação do pote */
+.card .ph{position:relative;overflow:hidden}
+.card .ph:after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 40%,#ffffffa6 50%,transparent 60%);transform:translateX(-70%);transition:transform .9s var(--ease)}
+.card:hover .ph:after{transform:translateX(70%)}
+.card:hover .ph svg{transform:scale(1.07) rotate(-3deg)}
+.circ .c{position:relative}
+.circ .c:before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px dashed var(--g);opacity:0;transition:opacity .3s}
+.circ:hover .c:before{opacity:.5;animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* voar até o orçamento */
+.fly{position:fixed;z-index:90;pointer-events:none;width:70px;height:88px}
+.badge.bump,.mbar .a3.bump{animation:bump .5s var(--ease)}
+@keyframes bump{30%{transform:scale(1.35)}60%{transform:scale(.92)}}
+.toast a{color:#d7f5da;margin-left:10px;font-weight:800;text-decoration:underline}
+.toast{pointer-events:none}.toast.on{pointer-events:auto}
+/* como a fórmula é feita */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;counter-reset:pp}
+.proc:before{content:"";position:absolute;left:8%;right:8%;top:38px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--g),var(--gold));transform-origin:0 50%;transform:scaleX(var(--pl,1));transition:transform 1.6s var(--ease) .2s}
+.js .proc:not(.in){--pl:0}
+.pstep{position:relative;display:grid;justify-items:center;text-align:center;gap:10px;padding:0 6px}
+.pstep i{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:#fff;color:var(--g);box-shadow:0 0 0 6px var(--bg),0 12px 26px -14px #0d5a1780;transition:background .3s,color .3s,transform .3s var(--ease)}
+.pstep i svg{width:32px;height:32px}
+.pstep:hover i{background:var(--g);color:#fff;transform:translateY(-4px)}
+.pstep b{font:800 18px/1.1 var(--fd);letter-spacing:.6px;text-transform:uppercase;color:var(--gd)}
+.pstep span{font-size:14.5px;color:var(--mut)}
+.pstep:before{counter-increment:pp;content:counter(pp,decimal-leading-zero);position:absolute;top:-6px;right:calc(50% - 50px);font:900 15px/1 var(--fd);font-style:italic;color:var(--gold)}
+.procw{display:grid;grid-template-columns:.8fr 2.2fr;gap:30px;align-items:center;padding:36px;border-radius:24px;background:linear-gradient(140deg,#fff,var(--mint));box-shadow:0 1px 0 var(--line)}
+.procw .ph2{border-radius:18px;overflow:hidden;aspect-ratio:3/4}
+.procw .ph2 img{width:100%;height:100%;object-fit:cover}
+/* quiz */
+.quiz{display:grid;grid-template-columns:1fr 1.25fr;gap:0;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 1px 0 var(--line),0 30px 60px -40px #0d5a1780}
+.quiz .qa1{position:relative;padding:40px;background:linear-gradient(150deg,var(--g),#0d5a17);color:#fff;overflow:hidden}
+.quiz .qa1 h2{color:#fff;font-size:clamp(34px,3.6vw,48px);font-style:italic;font-weight:900;margin:10px 0 14px}
+.quiz .qa1 p{color:#e3f7e5}
+.quiz .qa1 .kick{color:#d7f5da}
+.quiz .qa1 svg.lily{position:absolute;right:-30px;bottom:-30px;width:220px;opacity:.25}
+.quiz .qbar{display:flex;gap:6px;margin-top:26px}
+.quiz .qbar i{flex:1;height:5px;border-radius:5px;background:#ffffff40;transition:background .4s}
+.quiz .qbar i.on{background:#fff}
+.quiz .qb{padding:34px 36px;min-height:420px;display:grid;align-content:start}
+.quiz .qs{animation:qin .45s var(--ease)}
+@keyframes qin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.quiz h3{font-size:26px;margin-bottom:16px}
+.qopts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qopt{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;border:0;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);text-align:left;cursor:pointer;font-weight:700;color:var(--gd);transition:background .2s,box-shadow .2s,transform .2s}
+.qopt:hover{background:#fff;box-shadow:inset 0 0 0 2px var(--g);transform:translateY(-2px)}
+.qopt i{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--g)}
+.qopt i svg{width:21px;height:21px}
+.qres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0 14px}
+.qres a{display:grid;gap:6px;padding:10px;border-radius:14px;background:var(--bg);text-decoration:none;font-weight:700;font-size:14.5px;line-height:1.2;color:var(--gd);text-align:center;transition:transform .25s var(--ease)}
+.qres a:hover{transform:translateY(-4px)}
+.qres svg{width:70%;margin:0 auto}
+.qback{border:0;background:none;color:var(--mut);font-weight:700;cursor:pointer;margin-top:14px;justify-self:start;text-decoration:underline}
+/* página da fórmula: abas e garantias */
+.tabs2{margin-top:26px;border-radius:18px;background:#fff;box-shadow:0 1px 0 var(--line);overflow:hidden}
+.tabs2 [role=tablist]{display:flex;gap:4px;padding:6px;background:var(--bg);overflow-x:auto;scrollbar-width:none}
+.tabs2 [role=tab]{flex:none;border:0;background:none;padding:11px 16px;border-radius:12px;font:800 16px/1 var(--fd);letter-spacing:.6px;text-transform:uppercase;color:var(--mut);cursor:pointer}
+.tabs2 [role=tab][aria-selected=true]{background:#fff;color:var(--gd);box-shadow:0 4px 12px -6px #0d5a1740}
+.tabs2 [role=tabpanel]{padding:22px 24px;color:#2c4733}
+.tabs2 [role=tabpanel] ul{padding-left:20px;display:grid;gap:6px}
+.tabs2 [role=tabpanel]:not([hidden]){animation:qin .35s var(--ease)}
+.guar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.guar div{display:flex;gap:10px;align-items:center;padding:12px;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:14px;line-height:1.25;color:var(--gd);font-weight:700}
+.guar i{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--g)}
+.guar i svg{width:18px;height:18px}
+.pbar{display:none}
+/* ponteiro de destaque no lírio da newsletter */
+@media (prefers-reduced-motion:no-preference){.nl .lily{animation:sway 6s ease-in-out infinite alternate;transform-origin:50% 100%}}
+@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+/* voltar ao topo */
+.totop{position:fixed;right:28px;bottom:96px;z-index:49;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--gd);box-shadow:0 6px 18px #0d5a1733;cursor:pointer;opacity:0;transform:translateY(10px);transition:.3s var(--ease);pointer-events:none;font:700 20px/1 var(--fb)}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+@media (max-width:1100px){.proc{grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;padding-top:10px}.proc:before{display:none}.procw{grid-template-columns:1fr}.procw .ph2{display:none}.quiz{grid-template-columns:1fr}}
+@media (max-width:820px){
+.procw{padding:22px 16px}.proc{grid-template-columns:repeat(5,72%);scroll-snap-type:x mandatory;scrollbar-width:none}.pstep{scroll-snap-align:start}
+.quiz .qa1{padding:26px 22px}.quiz .qb{padding:22px 18px;min-height:0}.qopts{grid-template-columns:1fr 1fr;gap:8px}.qopt{padding:10px;gap:8px;font-size:14.5px;line-height:1.2}.qopt i{width:32px;height:32px}.qopt i svg{width:18px;height:18px}
+.qres{grid-template-columns:repeat(3,1fr)}
+.guar{grid-template-columns:1fr}
+.totop{display:none}
+.pbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fffffff5;backdrop-filter:blur(10px);box-shadow:0 -1px 0 var(--line)}
+.pbar .btn{flex:1;min-height:48px;font-size:16px;padding:0 10px}
+body.haspbar .mbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){.qstrip .row,.caps i{animation:none}}
 </style>
 </head>
 <body>
@@ -512,7 +646,7 @@ body{font-size:16.5px}
 <header>
   <div class="hrow">
     <a class="logo" href="#inicio"><span class="sr">Sete Lírios Manipulação, página inicial</span><svg class="lm" aria-hidden="true"><use href="#sl-lily"/></svg><svg class="lw" aria-hidden="true"><use href="#sl-word"/></svg></a>
-    <form class="search" role="search" id="sForm"><input id="sInput" type="search" placeholder="O que você está buscando?" aria-label="Buscar fórmulas por ativo ou objetivo"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button></form>
+    <form class="search" role="search" id="sForm"><input id="sInput" type="search" placeholder="Busque por ativo ou objetivo: creatina, sono, imunidade…" aria-label="Buscar fórmulas por ativo ou objetivo" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="sugg" aria-expanded="false"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><div class="sugg" id="sugg" role="listbox" aria-label="Sugestões"></div></form>
     <div class="hact">
       <a class="hl2 js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg><span><b>Envie sua receita</b>pelo WhatsApp</span></a>
       <a class="hl2 h2x js-wa" data-m="Olá! Quero falar com o farmacêutico." href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg><span><b>Fale com o</b>farmacêutico</span></a>
@@ -522,7 +656,7 @@ body{font-size:16.5px}
   <nav class="cats" aria-label="Objetivos"><ul id="catnav"></ul></nav>
 </header>
 <script>if(!location.hash)history.replaceState(null,"",location.pathname+"#b-como-guardar-manipulados")</script>
-<main id="view" data-pre="b-como-guardar-manipulados"><section class="band"><div class="wrap art"><div class="crumbs"><a href="#inicio">Início</a> / <a href="#blog">Blog</a> / Cuidados</div><span class="kick">Cuidados</span><h1>Como guardar seus manipulados para manter a qualidade</h1><p>Fórmulas manipuladas têm validade menor que a de produtos industrializados, porque não levam conservantes em excesso. Guardar bem faz diferença.</p><h2>Longe do banheiro e da cozinha</h2><p>Vapor e calor alteram cápsulas e pós. Prefira um armário seco e arejado, longe do sol.</p><h2>Tampa sempre fechada</h2><p>O pote foi escolhido para proteger os ativos. Não transfira para porta-comprimidos por muito tempo.</p><h2>Geladeira só quando o rótulo pedir</h2><p>Algumas fórmulas, principalmente cremes e probióticos, precisam de refrigeração. Siga o que estiver no rótulo.</p><h2>Respeite a validade</h2><p>Use até a data indicada. Se notar mudança de cor, cheiro ou textura, fale com a farmácia antes de usar.</p><p style="font-size:14px;color:var(--soft)">Conteúdo revisado pela equipe farmacêutica da Sete Lírios.</p><div class="hc-cta" style="margin-top:18px"><a class="btn lime js-wa" data-m="Olá! Li o blog e tenho uma dúvida." href="https://wa.me/5516992440470?text=Ol%C3%A1!%20Li%20o%20blog%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a></div></div></section><section class="band" id="receita"><div class="wrap"><div class="rxbox rv"><div><span class="kick">Manipule sua receita</span><h2 style="margin:10px 0 20px">Da receita ao pote em <em>3 passos</em></h2><div class="steps"><div class="step"><i>1</i><div><b>Envie a foto da receita</b><span>Pelo WhatsApp, com todas as páginas legíveis.</span></div></div><div class="step"><i>2</i><div><b>Receba o orçamento</b><span>O farmacêutico confere a fórmula e envia valor, prazo e forma de uso.</span></div></div><div class="step"><i>3</i><div><b>Retire ou receba em casa</b><span>Pague por Pix, cartão ou dinheiro.</span></div></div></div><div class="hc-cta" style="margin-top:20px"><a class="btn wa js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="https://wa.me/5516992440470?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20enviar%20minha%20receita%20para%20or%C3%A7amento." target="_blank" rel="noopener">Enviar receita no WhatsApp<span class="ar" aria-hidden="true">→</span></a></div></div><figure class="pic"><img src="/img/laboratorio-real-480.webp" srcset="/img/laboratorio-real-480.webp 520w, /img/laboratorio-real.webp 1000w" sizes="(min-width:820px) 520px, 92vw" alt="Farmacêutica preparando cápsulas no laboratório da Sete Lírios" width="1000" height="2168" loading="lazy" decoding="async" style="object-position:center 45%"><figcaption>Nosso laboratório · Franca</figcaption></figure></div></div></section></main>
+<main id="view" data-pre="b-como-guardar-manipulados"><section class="band"><div class="wrap art"><div class="crumbs"><a href="#inicio">Início</a> / <a href="#blog">Blog</a> / Cuidados</div><span class="kick">Cuidados</span><h1>Como guardar seus manipulados para manter a qualidade</h1><p>Fórmulas manipuladas têm validade menor que a de produtos industrializados, porque não levam conservantes em excesso. Guardar bem faz diferença.</p><h2>Longe do banheiro e da cozinha</h2><p>Vapor e calor alteram cápsulas e pós. Prefira um armário seco e arejado, longe do sol.</p><h2>Tampa sempre fechada</h2><p>O pote foi escolhido para proteger os ativos. Não transfira para porta-comprimidos por muito tempo.</p><h2>Geladeira só quando o rótulo pedir</h2><p>Algumas fórmulas, principalmente cremes e probióticos, precisam de refrigeração. Siga o que estiver no rótulo.</p><h2>Respeite a validade</h2><p>Use até a data indicada. Se notar mudança de cor, cheiro ou textura, fale com a farmácia antes de usar.</p><p style="font-size:14px;color:var(--soft)">Conteúdo revisado pela equipe farmacêutica da Sete Lírios.</p><div class="hc-cta" style="margin-top:18px"><a class="btn lime js-wa" data-m="Olá! Li o blog e tenho uma dúvida." href="https://wa.me/5516992440470?text=Ol%C3%A1!%20Li%20o%20blog%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a></div></div></section><section class="band" id="receita"><div class="wrap"><div class="rxbox rv"><div><span class="kick">Manipule sua receita</span><h2 style="margin:10px 0 20px">Da receita ao pote em <em>3 passos</em></h2><div class="steps"><div class="step" style=""><i>1</i><div><b>Envie a foto da receita</b><span>Pelo WhatsApp, com todas as páginas legíveis.</span></div></div><div class="step" style=""><i>2</i><div><b>Receba o orçamento</b><span>O farmacêutico confere a fórmula e envia valor, prazo e forma de uso.</span></div></div><div class="step" style=""><i>3</i><div><b>Retire ou receba em casa</b><span>Pague por Pix, cartão ou dinheiro.</span></div></div></div><div class="hc-cta" style="margin-top:20px"><a class="btn wa js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="https://wa.me/5516992440470?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20enviar%20minha%20receita%20para%20or%C3%A7amento." target="_blank" rel="noopener">Enviar receita no WhatsApp<span class="ar" aria-hidden="true">→</span></a></div></div><figure class="pic"><img src="/img/laboratorio-real-480.webp" srcset="/img/laboratorio-real-480.webp 520w, /img/laboratorio-real.webp 1000w" sizes="(min-width:820px) 520px, 92vw" alt="Farmacêutica preparando cápsulas no laboratório da Sete Lírios" width="1000" height="2168" loading="lazy" decoding="async" style="object-position:center 45%"><figcaption>Nosso laboratório · Franca</figcaption></figure></div></div></section></main>
 <div class="pre"><div class="nl"><svg class="lily" aria-hidden="true" viewBox="42 7 116 124"><use href="#sl-lily"/></svg>
   <p class="t1">Cadastre-se e receba conteúdos sobre treino, saúde e fórmulas antes de todo mundo.</p>
   <h2>Receba novidades <em>e conteúdos</em></h2>
@@ -555,6 +689,7 @@ body{font-size:16.5px}
 <a class="fab js-wa" data-m="Olá! Vim pelo site da Sete Lírios." href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
 <nav class="mbar" aria-label="Ações rápidas"><a class="a1 js-wa" data-m="Olá! Vim pelo site da Sete Lírios." href="#">WhatsApp</a><a class="a2 js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="#">Receita</a><a class="a3" href="#orcamento"><span>Orçamento <span id="qn2"></span></span></a></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/app.js?v=68f09063" defer></script>
+<button class="totop" id="totop" aria-label="Voltar ao topo">↑</button>
+<script src="/app.js?v=902bc222" defer></script>
 </body>
 </html>
