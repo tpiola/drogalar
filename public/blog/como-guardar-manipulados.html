@@ -166,7 +166,7 @@ header{position:sticky;top:0;z-index:40;background:#fff;box-shadow:0 1px 0 var(-
 .photo img{width:100%;height:100%;object-fit:cover;object-position:var(--op,center)}
 .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f4faf3 0%,#f4faf3f2 30%,#f4faf399 52%,transparent 76%)}
 .hc-slide.ph{grid-template-columns:minmax(0,640px)}
-@media (min-width:821px){.hc-slide.ph .photo{left:36%}.hc-slide.ph .photo:after{background:linear-gradient(90deg,var(--sbg) 0%,#f4faf300 38%)}}
+@media (min-width:821px){.hc-slide{padding:0 max(80px,calc((100% - 1320px)/2))}.hc-slide.ph .photo{left:36%}.hc-slide.ph .photo:after{background:linear-gradient(90deg,var(--sbg) 0%,#f4faf300 38%)}}
 .hc-nav{position:absolute;top:50%;z-index:5;width:46px;height:46px;margin-top:-23px;border-radius:50%;border:0;background:#fff;color:var(--gd);font:700 26px/1 var(--fb);cursor:pointer;box-shadow:0 6px 18px #0d5a1726;transition:transform .2s}
 .hc-nav:hover{transform:scale(1.08)}
 .hc-nav.prev{left:16px}.hc-nav.next{right:16px}
