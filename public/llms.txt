@@ -1,0 +1,40 @@
+# Farmácia Sete Lírios Manipulação
+
+> Farmácia de manipulação, homeopatia e drogaria em Franca/SP, com foco em fórmulas de alta performance, vitaminas e dermocosméticos manipulados. Orçamento de receitas pelo WhatsApp, com conferência farmacêutica.
+
+## Dados da farmácia
+- Nome: Farmácia Sete Lírios Manipulação (Sete Lírios Manipulação, Homeopatia e Drogaria)
+- Endereço: Av. Brasil, 815, sala 2, Vila Aparecida, Franca/SP, CEP 14401-240
+- WhatsApp: (16) 99244-0470
+- Horário: segunda a sábado 8h às 20h; domingo 9h às 12h
+- Pagamento: Pix, cartão de crédito, cartão de débito e dinheiro
+- Instagram: https://www.instagram.com/farmaciasetelirios/
+- Como chegar: https://www.google.com/maps/dir/?api=1&destination=-20.5265417,-47.3840619
+- Avaliação no Google: 5,0
+
+## Como pedir
+- Envie a foto da receita pelo WhatsApp; o farmacêutico confere e envia valor, prazo e forma de uso.
+- Fórmulas com hormônios e medicamentos sob prescrição só são preparados com receita válida.
+- Retirada na loja ou entrega em Franca, combinadas no orçamento.
+
+## Objetivos atendidos
+- Performance, energia e foco, imunidade, sono e bem-estar, pele, cabelo e unhas, articulações e ossos, saúde da mulher.
+
+## Perguntas frequentes
+- Preciso de receita para manipular? Depende do ativo. Vitaminas e suplementos podem ser preparados com orientação farmacêutica; medicamentos e fórmulas com hormônios exigem receita válida. Envie a sua pelo WhatsApp e o farmacêutico confere.
+- Como peço um orçamento? Monte sua lista no site ou envie a foto da receita pelo WhatsApp (16) 99244-0470. A equipe retorna com valor, prazo e forma de uso.
+- Quanto tempo leva o preparo? O prazo depende da fórmula e é informado no orçamento. Muitas fórmulas ficam prontas no mesmo dia.
+- Vocês entregam? Sim, em Franca. A taxa e o prazo de entrega são combinados no orçamento, conforme o bairro.
+- Quais as formas de pagamento? Pix, cartão de crédito, cartão de débito e dinheiro.
+- A Sete Lírios também é drogaria e faz homeopatia? Sim. Além da manipulação, temos homeopatia e itens de drogaria na loja da Av. Brasil, 815.
+
+## Blog
+- [Como funciona uma farmácia de manipulação](https://drogalar.vercel.app/blog/como-funciona-farmacia-de-manipulacao): Da receita ao pote: entenda cada etapa e por que a fórmula é feita só para você.
+- [Cápsula, sachê ou líquido: como é escolhida a forma farmacêutica](https://drogalar.vercel.app/blog/capsula-sache-ou-liquido): A mesma fórmula pode virar cápsula, sachê ou gotas. Veja o que muda.
+- [Como guardar seus manipulados para manter a qualidade](https://drogalar.vercel.app/blog/como-guardar-manipulados): Calor e umidade são os maiores inimigos das fórmulas. Veja onde guardar.
+
+## Páginas
+- [Início](https://drogalar.vercel.app/)
+- [Informações farmacêuticas](https://drogalar.vercel.app/#info-farmaceutica)
+- [Termos](https://drogalar.vercel.app/#termos)
+- [Privacidade](https://drogalar.vercel.app/#privacidade)

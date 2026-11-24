@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drogalar.vercel.app/sitemap.xml
