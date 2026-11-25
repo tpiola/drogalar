@@ -68,12 +68,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/privacidade",
-      "destination": "/#privacidade",
-      "permanent": true
-    }
   ]
 }

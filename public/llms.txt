@@ -30,6 +30,42 @@
 - Quais as formas de pagamento? Pix, cartão de crédito, cartão de débito e dinheiro.
 - A Sete Lírios também é drogaria e faz homeopatia? Sim. Além da manipulação, temos homeopatia e itens de drogaria na loja da Av. Brasil, 815.
 
+## Objetivos
+- [Performance](https://drogalar.vercel.app/objetivo/performance): Treino, força e recuperação
+- [Energia e foco](https://drogalar.vercel.app/objetivo/energia): Disposição para treinar e render
+- [Imunidade](https://drogalar.vercel.app/objetivo/imunidade): Defesas em dia para não parar
+- [Sono e recuperação](https://drogalar.vercel.app/objetivo/sono): Descanso que faz o treino render
+- [Articulações e ossos](https://drogalar.vercel.app/objetivo/articulacoes): Movimento com conforto
+- [Pele](https://drogalar.vercel.app/objetivo/pele): Dermocosméticos manipulados
+- [Cabelo e unhas](https://drogalar.vercel.app/objetivo/cabelo): Fios e unhas fortes
+- [Saúde da mulher](https://drogalar.vercel.app/objetivo/mulher): Cuidado em cada fase
+
+## Fórmulas
+- [Creatina monohidratada](https://drogalar.vercel.app/formula/creatina): Sachê ou cápsulas, Dose personalizada. Um dos ativos mais estudados no esporte. A farmácia ajusta a forma (sachê, cápsula) e a quantidade conforme a orientação do seu nutricionista ou médico.
+- [Beta-alanina](https://drogalar.vercel.app/formula/beta-alanina): Cápsulas ou sachê, Dose personalizada. Ativo usado em protocolos de treino de alta intensidade. A dose e o momento de uso são definidos pelo profissional que acompanha você.
+- [Magnésio dimalato](https://drogalar.vercel.app/formula/magnesio-dimalato): Cápsulas, 60 cápsulas. Forma de magnésio frequentemente usada por quem treina. Sem corantes, com a dose indicada na sua prescrição.
+- [Coenzima Q10](https://drogalar.vercel.app/formula/coq10): Cápsulas oleosas, 30 ou 60 cápsulas. Ativo presente naturalmente nas células. A manipulação permite ajustar a concentração ao que foi prescrito.
+- [Complexo B](https://drogalar.vercel.app/formula/complexo-b): Cápsulas, 60 cápsulas. Associação de vitaminas do complexo B em dose personalizada, sem excesso de ativos que você não precisa.
+- [Rhodiola rosea](https://drogalar.vercel.app/formula/rhodiola): Cápsulas, Extrato padronizado. Fitoterápico de extrato padronizado. Use somente com orientação de profissional habilitado.
+- [Composto para imunidade](https://drogalar.vercel.app/formula/composto-imunidade): Cápsulas, 60 cápsulas. Associação de vitamina C, própolis, acerola e equinácea, preparada conforme a fórmula indicada pelo profissional.
+- [Vitamina C + zinco](https://drogalar.vercel.app/formula/vitamina-c-zinco): Cápsulas, 60 cápsulas. Vitamina C e zinco na concentração definida na prescrição, em cápsulas fáceis de engolir.
+- [Vitamina D3](https://drogalar.vercel.app/formula/vitamina-d3): Cápsulas ou gotas, Dose conforme exame. A dose de vitamina D costuma ser definida a partir do exame de sangue. Envie a receita para o orçamento.
+- [Magnésio treonato](https://drogalar.vercel.app/formula/magnesio-treonato): Cápsulas, 60 cápsulas. Forma de magnésio muito procurada para rotinas noturnas. Dose definida pelo profissional.
+- [L-teanina](https://drogalar.vercel.app/formula/l-teanina): Cápsulas, 60 cápsulas. Aminoácido presente no chá-verde, manipulado na quantidade indicada para você.
+- [Glicina](https://drogalar.vercel.app/formula/glicina): Sachê ou cápsulas, Dose personalizada. Aminoácido usado em rotinas de descanso. A farmácia prepara em sachê ou cápsula, como você preferir.
+- [Sérum antissinais](https://drogalar.vercel.app/formula/serum-antissinais): Sérum facial, 30 ml. Sérum manipulado com ativos escolhidos para o seu tipo de pele, com textura leve e rótulo personalizado.
+- [Espuma de limpeza facial](https://drogalar.vercel.app/formula/espuma-limpeza): Espuma, 100 ml. Limpeza facial com ativos definidos para pele oleosa, mista ou sensível, preparada sob medida.
+- [Colágeno hidrolisado](https://drogalar.vercel.app/formula/colageno): Sachê ou cápsulas, 30 doses. Peptídeos de colágeno em sachê ou cápsula, sem açúcar e no sabor que você preferir.
+- [Biotina](https://drogalar.vercel.app/formula/biotina): Cápsulas, 60 cápsulas. Vitamina do complexo B usada em fórmulas para cabelo e unhas, na concentração da sua prescrição.
+- [Silício orgânico](https://drogalar.vercel.app/formula/silicio): Cápsulas, 60 cápsulas. Ativo usado em fórmulas de cabelo, pele e unhas. Dose definida pelo profissional.
+- [Loção capilar](https://drogalar.vercel.app/formula/locao-capilar): Loção, 60 ou 120 ml. Loções capilares com ativos de uso tópico. Algumas só podem ser preparadas com receita: envie a sua para o orçamento. Exige receita.
+- [Colágeno tipo II não desnaturado](https://drogalar.vercel.app/formula/colageno-ii): Cápsulas, 30 cápsulas. Ativo em dose baixa, usado em fórmulas para articulações. Ideal manipular junto com outros ativos da sua prescrição.
+- [Vitamina D3 + K2](https://drogalar.vercel.app/formula/d3-k2): Cápsulas ou gotas, 30 ou 60 doses. Associação muito prescrita para a saúde dos ossos. Dose definida a partir do seu exame.
+- [Cálcio + magnésio](https://drogalar.vercel.app/formula/calcio-magnesio): Cápsulas, 60 cápsulas. Minerais combinados na proporção indicada pelo profissional, em cápsulas de tamanho confortável.
+- [Ferro quelato](https://drogalar.vercel.app/formula/ferro-quelato): Cápsulas, 30 ou 60 cápsulas. Forma de ferro com boa tolerância. Use somente após avaliação, porque a dose depende do exame.
+- [Ácido fólico](https://drogalar.vercel.app/formula/acido-folico): Cápsulas, 30 ou 60 cápsulas. Muito prescrito no planejamento da gestação. A dose é definida pelo médico.
+- [Fórmulas hormonais](https://drogalar.vercel.app/formula/hormonios): Cápsulas ou creme, Conforme receita. Fórmulas com hormônios só são preparadas mediante receita médica, conferida pelo farmacêutico. Exige receita.
+
 ## Blog
 - [Como funciona uma farmácia de manipulação](https://drogalar.vercel.app/blog/como-funciona-farmacia-de-manipulacao): Da receita ao pote: entenda cada etapa e por que a fórmula é feita só para você.
 - [Cápsula, sachê ou líquido: como é escolhida a forma farmacêutica](https://drogalar.vercel.app/blog/capsula-sache-ou-liquido): A mesma fórmula pode virar cápsula, sachê ou gotas. Veja o que muda.
@@ -37,6 +73,6 @@
 
 ## Páginas
 - [Início](https://drogalar.vercel.app/)
-- [Informações farmacêuticas](https://drogalar.vercel.app/#info-farmaceutica)
-- [Termos](https://drogalar.vercel.app/#termos)
-- [Privacidade](https://drogalar.vercel.app/#privacidade)
+- [Informações farmacêuticas](https://drogalar.vercel.app/info-farmaceutica)
+- [Termos](https://drogalar.vercel.app/termos)
+- [Privacidade](https://drogalar.vercel.app/privacidade)

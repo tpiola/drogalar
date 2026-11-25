@@ -25,7 +25,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":["Pharmacy","LocalBusiness"],"@id":"https://drogalar.vercel.app/#farmacia","name":"Farmácia Sete Lírios Manipulação","alternateName":["Sete Lírios Manipulação","Farmácia Sete Lírios Manipulação Homeopatia Drogaria"],"description":"Farmácia de manipulação, homeopatia e drogaria em Franca/SP. Fórmulas personalizadas, vitaminas, dermocosméticos manipulados e orçamento de receitas pelo WhatsApp.","url":"https://drogalar.vercel.app/","image":["https://drogalar.vercel.app/img/potes-real.webp","https://drogalar.vercel.app/img/fachada-real.webp","https://drogalar.vercel.app/img/capsulas-real.webp"],"logo":"https://drogalar.vercel.app/img/logo.png","telephone":"+55-16-99244-0470","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Av. Brasil, 815, sala 2","addressLocality":"Franca","addressRegion":"SP","postalCode":"14401-240","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-20.5265417,"longitude":-47.3840619},"hasMap":"https://www.google.com/maps/dir/?api=1&destination=-20.5265417,-47.3840619","areaServed":{"@type":"City","name":"Franca"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"12:00"}],"paymentAccepted":"Pix, cartão de crédito, cartão de débito, dinheiro","currenciesAccepted":"BRL","availableService":[{"@type":"Service","name":"Manipulação de fórmulas sob prescrição"},{"@type":"Service","name":"Homeopatia"},{"@type":"Service","name":"Orçamento de receita pelo WhatsApp"}],"sameAs":["https://www.instagram.com/farmaciasetelirios/"]},{"@type":"WebSite","@id":"https://drogalar.vercel.app/#site","url":"https://drogalar.vercel.app/","name":"Sete Lírios Manipulação","inLanguage":"pt-BR","publisher":{"@id":"https://drogalar.vercel.app/#farmacia"}}]}
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Como guardar seus manipulados para manter a qualidade", "description": "Calor e umidade são os maiores inimigos das fórmulas. Veja onde guardar.", "inLanguage": "pt-BR", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "mainEntityOfPage": "https://drogalar.vercel.app/blog/como-guardar-manipulados", "image": "https://drogalar.vercel.app/img/potes-real.webp", "author": {"@type": "Organization", "name": "Sete Lírios Manipulação", "url": "https://drogalar.vercel.app/"}, "publisher": {"@id": "https://drogalar.vercel.app/#farmacia"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Como guardar seus manipulados para manter a qualidade", "description": "Calor e umidade são os maiores inimigos das fórmulas. Veja onde guardar.", "inLanguage": "pt-BR", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "mainEntityOfPage": "https://drogalar.vercel.app/blog/como-guardar-manipulados", "image": "https://drogalar.vercel.app/img/potes-real.webp", "author": {"@type": "Organization", "name": "Sete Lírios Manipulação", "url": "https://drogalar.vercel.app/"}, "publisher": {"@id": "https://drogalar.vercel.app/#farmacia"}}</script>
 <style>
 /* paleta tirada da comunicação real da Sete Lírios: menta claro, verde vivo da embalagem, verde escuro do logo e dourado do lírio */
 :root{--bg:#f4faf3;--mint:#e4f3e5;--mint2:#cfe9d2;--card:#fff;--ink:#12301a;--mut:#4d6655;--soft:#4d6655;--line:#d9eadb;--g:#0a841c;--g2:#08721a;--gd:#0d5a17;--gold:#c9a24c;--goldd:#8f6420;--fd:'Figtree',system-ui,sans-serif;--fb:'Figtree',system-ui,sans-serif;--r:16px;--ease:cubic-bezier(.2,.8,.2,1)}
@@ -901,6 +901,53 @@ footer li,footer p{color:#b5beb7}
 .trust{padding:0 12px}
 .trust .in{grid-template-columns:repeat(4,minmax(230px,1fr));padding:0}
 }
+
+/* ================= v8 · e-commerce de manipulados com fotos de atletas ================= */
+.shead .kick{display:none}
+.shead h2 em,.procw em,.rxbox h2 em{color:inherit}
+/* banner com foto */
+.hc-slide.ph{grid-template-columns:minmax(0,560px)}
+@media (min-width:821px){.hc-slide.ph .photo{left:28%!important}.hc-slide.ph .photo:after{background:linear-gradient(90deg,#0c110d 0%,#0c110de0 14%,#0c110d55 42%,#0c110d00 70%)!important}}
+.hc-slide.ph .photo img{object-position:var(--op,center)}
+.hc-slide .hc-txt p{max-width:460px}
+/* objetivos com fotos */
+.obj{background:#111}
+.obj .obg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s var(--ease)}
+.obj:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0c110d26 0%,#0c110d00 30%,#0c110d99 68%,#0c110df2 100%)}
+.obj:hover .obg{transform:scale(1.06)}
+.obj .s{color:#e6ece7}
+/* faixas de imagem em tela cheia entre as seções */
+.brk{position:relative;min-height:440px;display:grid;align-items:center;overflow:hidden;color:#fff;isolation:isolate;margin:20px 0}
+.brk img{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover;object-position:var(--op,center);z-index:-2;will-change:transform;transform:translate3d(0,var(--py,0px),0)}
+.brk:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0c110de6 0%,#0c110db3 36%,#0c110d1a 72%)}
+.brk.r:after{background:linear-gradient(270deg,#0c110de6 0%,#0c110db3 36%,#0c110d1a 72%)}
+.brk .in{max-width:1320px;width:100%;margin:0 auto;padding:60px 20px}
+.brk .bx{max-width:520px}
+.brk.r .bx{margin-left:auto}
+.brk h2{color:#fff;font-size:clamp(30px,3.6vw,48px);line-height:1.05;margin-bottom:14px}
+.brk p{color:#d8dfd9;font-size:18px;margin-bottom:22px}
+.brk .btn.ghost{color:#fff}
+@media (prefers-reduced-motion:no-preference){.js .brk .bx{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.js .brk.in .bx{opacity:1;transform:none}}
+/* avaliações em faixa */
+.revs{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:24px 28px;border:1px solid var(--line);border-radius:14px}
+.revs .score{font-size:46px}
+.revs .chips{margin:0}
+/* texto institucional (SEO/GEO) */
+.seo{border-top:1px solid var(--line);padding-top:36px}
+.seo h2{font-size:24px;margin-bottom:12px}
+.seo h3{font-size:18px;margin:18px 0 6px}
+.seo p,.seo li{color:var(--mut);font-size:15.5px;margin-bottom:8px}
+.seo ul{padding-left:20px}
+.seo .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
+.seo a{color:var(--g2)}
+@media (max-width:820px){
+.brk{min-height:480px;align-items:end}
+.brk:after,.brk.r:after{background:linear-gradient(0deg,#0c110df2 30%,#0c110d99 62%,#0c110d26)}
+.brk .in{padding:40px 20px}
+.brk.r .bx{margin-left:0}
+.revs{grid-template-columns:1fr;gap:14px}
+.seo .cols{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -927,7 +974,7 @@ footer li,footer p{color:#b5beb7}
 <div class="pre"><div class="nl"><svg class="lily" aria-hidden="true" viewBox="42 7 116 124"><use href="#sl-lily"/></svg>
   <p class="t1">Cadastre-se e receba conteúdos sobre treino, saúde e fórmulas antes de todo mundo.</p>
   <h2>Receba novidades <em>e conteúdos</em></h2>
-  <form id="nlForm" novalidate><input type="text" name="n" autocomplete="name" placeholder="Seu nome" aria-label="Seu nome"><input type="text" name="c" placeholder="WhatsApp ou e-mail" aria-label="WhatsApp ou e-mail"><button class="btn">Cadastre-se</button><label class="chk"><input type="checkbox" name="ok"><span>Quero receber conteúdos da Sete Lírios. Li a <a href="#privacidade">Política de privacidade</a>. Não enviamos promoção de medicamentos.</span></label><div id="nlMsg" role="status"></div></form>
+  <form id="nlForm" novalidate><input type="text" name="n" autocomplete="name" placeholder="Seu nome" aria-label="Seu nome"><input type="text" name="c" placeholder="WhatsApp ou e-mail" aria-label="WhatsApp ou e-mail"><button class="btn">Cadastre-se</button><label class="chk"><input type="checkbox" name="ok"><span>Quero receber conteúdos da Sete Lírios. Li a <a href="/privacidade">Política de privacidade</a>. Não enviamos promoção de medicamentos.</span></label><div id="nlMsg" role="status"></div></form>
   <p class="anv"><i aria-hidden="true">!</i><span><b>Atenção:</b> segundo a Anvisa, medicamentos manipulados só podem ser vendidos pela farmácia que os prepara, no site próprio e na loja física. <b>A Sete Lírios não vende por marketplaces, sites ou lojas de terceiros.</b></span></p>
 </div></div>
 <footer>
@@ -939,15 +986,15 @@ footer li,footer p{color:#b5beb7}
       <div class="soc"><a href="https://www.instagram.com/farmaciasetelirios/" aria-label="Instagram da Sete Lírios" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a class="js-wa" data-m="Olá! Vim pelo site." href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a><a class="js-route" href="#" aria-label="Como chegar pelo Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></a><a id="waze" href="#" aria-label="Como chegar pelo Waze"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15a8 8 0 1 1 15-4c0 4-3 7-7 7H8l-3 2v-3"/><circle cx="9.5" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="10" r="1" fill="currentColor"/></svg></a></div>
       <div class="fline"><p class="fpay">Formas de pagamento</p><div class="payi" id="payi"></div><span class="ppill">Pix · cartão · dinheiro · na loja ou na entrega</span></div>
     </div>
-    <div><h3 class="fh">Objetivos</h3><ul id="fobj"></ul></div>
-    <div><h3 class="fh">Mais procurados</h3><ul id="ftop"></ul></div>
+    <div><h3 class="fh">Objetivos</h3><ul id="fobj"><li><a href="/objetivo/performance">Performance</a></li><li><a href="/objetivo/energia">Energia e foco</a></li><li><a href="/objetivo/imunidade">Imunidade</a></li><li><a href="/objetivo/sono">Sono e recuperação</a></li><li><a href="/objetivo/articulacoes">Articulações e ossos</a></li><li><a href="/objetivo/pele">Pele</a></li><li><a href="/objetivo/cabelo">Cabelo e unhas</a></li><li><a href="/objetivo/mulher">Saúde da mulher</a></li></ul></div>
+    <div><h3 class="fh">Mais procurados</h3><ul id="ftop"><li><a href="/formula/creatina">Creatina monohidratada</a></li><li><a href="/formula/beta-alanina">Beta-alanina</a></li><li><a href="/formula/magnesio-dimalato">Magnésio dimalato</a></li><li><a href="/formula/coq10">Coenzima Q10</a></li><li><a href="/formula/complexo-b">Complexo B</a></li><li><a href="/formula/rhodiola">Rhodiola rosea</a></li><li><a href="/formula/composto-imunidade">Composto para imunidade</a></li><li><a href="/formula/vitamina-c-zinco">Vitamina C + zinco</a></li></ul></div>
     <div><h3 class="fh">Atendimento</h3><ul><li>WhatsApp <a class="js-wa" data-m="Olá! Vim pelo site." href="#">(16) 99244-0470</a></li><li>Seg a sáb · 8h às 20h</li><li>Domingo · 9h às 12h</li><li>Av. Brasil, 815, sala 2</li><li>Vila Aparecida · Franca/SP</li><li><a class="js-route" href="#">Como chegar (Google Maps)</a></li></ul></div>
-    <div><h3 class="fh">Institucional</h3><ul><li><a href="#blog">Blog</a></li><li><a href="#receita">Manipule sua receita</a></li><li><a href="#duvidas">Dúvidas frequentes</a></li><li><a href="#orcamento">Minha lista de orçamento</a></li><li><a href="#info-farmaceutica">Informações farmacêuticas</a></li><li><a href="#termos">Termos e condições</a></li><li><a href="#privacidade">Política de privacidade</a></li></ul></div>
+    <div><h3 class="fh">Institucional</h3><ul><li><a href="#blog">Blog</a></li><li><a href="#receita">Manipule sua receita</a></li><li><a href="#duvidas">Dúvidas frequentes</a></li><li><a href="#orcamento">Minha lista de orçamento</a></li><li><a href="/info-farmaceutica">Informações farmacêuticas</a></li><li><a href="/termos">Termos e condições</a></li><li><a href="/privacidade">Política de privacidade</a></li></ul></div>
   </div>
   <p class="fbar">Retire na loja da Av. Brasil, 815 ou receba em Franca · taxa e prazo combinados no orçamento</p>
   <div class="seals">
     <div class="seal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></i><span><b>Site seguro</b>Conexão criptografada HTTPS</span></div>
-    <div class="seal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></i><span><b>Dados protegidos</b><a href="#privacidade">LGPD · receita vista só pela equipe farmacêutica</a></span></div>
+    <div class="seal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></i><span><b>Dados protegidos</b><a href="/privacidade">LGPD · receita vista só pela equipe farmacêutica</a></span></div>
     <div class="seal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-10V2"/><path d="M8 2h8"/></svg></i><span><b>Conferência farmacêutica</b>Toda fórmula passa pelo farmacêutico</span></div>
     <div class="seal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v5h5v6h-5v5H9v-5H4V8h5z"/></svg></i><span><b>Normas sanitárias</b><a href="https://www.gov.br/anvisa/pt-br">Segue as determinações da Anvisa</a></span></div>
   </div>
@@ -957,6 +1004,6 @@ footer li,footer p{color:#b5beb7}
 <nav class="mbar" aria-label="Ações rápidas"><a class="a1 js-wa" data-m="Olá! Vim pelo site da Sete Lírios." href="#">WhatsApp</a><a class="a2 js-wa" data-m="Olá! Vim pelo site e quero enviar minha receita para orçamento." href="#">Receita</a><a class="a3" href="#orcamento"><span>Orçamento <span id="qn2"></span></span></a></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <button class="totop" id="totop" aria-label="Voltar ao topo">↑</button>
-<script src="/app.js?v=ff90a295" defer></script>
+<script src="/app.js?v=817c79d3" defer></script>
 </body>
 </html>
